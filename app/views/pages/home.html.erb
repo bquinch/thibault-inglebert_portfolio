@@ -1,2 +1,8 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="banner-tibo rellax"style="background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= image_path "bg_nice.jpg", alt: "alttext", width: 1000; %>)">
+  <h1 class="banner-tibo__main-title rellax">THIBAULT INGLEBERT</h1>
+  <p class="banner-tibo__subtitle rellax">Graphic designer</p>
+</div>
+<%= render 'shared/presentation' %>
+<%= render 'shared/index-list' %>
+<%= render 'shared/footer' %>
+
