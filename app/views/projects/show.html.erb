@@ -1,0 +1,34 @@
+<div class="show-project-card bg-white text-center">
+  <div class="carousel-container">
+    <div id="carouselProjectIndicator" class="carousel slide px-5" data-ride="carousel">
+      <ol class="carousel-indicators">
+        <li data-target="#carouselProjectIndicator" data-slide-to="0" class="active"></li>
+        <% @project.photos[1..-1].each_with_index do |_photo, index|%>
+          <li data-target="#carouselProjectIndicator" data-slide-to="<%= index + 1 %>"></li>
+        <% end %>
+      </ol>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img class="d-block w-100" src="<%= cl_image_path @project.photos.first.key, crop: :fill %>">
+        </div>
+        <% @project.photos[1..-1].each do |photo| %>
+          <div class="carousel-item">
+            <img class="d-block w-100" src="<%= cl_image_path photo.key, crop: :fill %>">
+          </div>
+        <% end %>
+      </div>
+      <a class="carousel-control-prev" href="#carouselProjectIndicator" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Précédent</span>
+      </a>
+      <a class="carousel-control-next" href="#carouselProjectIndicator" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Suivant</span>
+      </a>
+    </div>
+  </div>
+  <div class="show-project-card__category"><h1><%= @project.category.upcase %></h1></div>
+  <div class="show-project-card__description"><p><%= @project.description %></p></div>
+  <div class="show-project-card__client"><p><%= @project.client %></p></div>
+  <div class="show-project-card__date"><p><%= @project.date %></p></div>
+</div>

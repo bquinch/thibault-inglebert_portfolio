@@ -1,0 +1,12 @@
+<div class="index-container">
+  <% @projects.each do |project| %>
+    <%= link_to project_path(project) do %>
+      <div class="index-project-card" style="background: url('<%= cl_image_path project.photos.first.key, height: 220, width: 300, crop: :fill %>') !important">
+        <div class="index-project-card-white" style="background: linear-gradient(rgba(255,255,255,0.80), rgba(255,255,255,0.80)), url('<%= cl_image_path project.photos.first.key, height: 220, width: 300, crop: :fill %>') !important">
+          <p class='index-project-card__client'><%= project.client %></p>
+          <p class='index-project-card__category'><%= project.category %></p>
+        </div>
+      </div>
+    <% end %>
+  <% end %>
+</div>

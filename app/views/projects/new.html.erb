@@ -1,0 +1,22 @@
+<div class="new-project-container my-3 col-md-6 col-sm-12">
+  <div class="new-project-form-container bg-white p-3 text-center">
+  <h1 class='new-project-container-container__title text-center'>Ajouter un projet</h1>
+    <%= simple_form_for @project do |f| %>
+    <div class="form-inputs text-justify">
+      <%= f.input :description, placeholder: 'Description du projet' %>
+      <%= f.input :category, label: 'Catégorie', collection: %w[affiche agenda calendrier cartes-de-visite charte-graphique couverture
+                                            couverture CV flyer kakémonos logo mailing mariage naissance plaquette
+                                            présentation retouche t-shirt webdesign
+                                            ] %>
+      <%= f.input :client, placeholder: 'Nom du client, de la marque' %>
+      <%= f.input :date, as: :string, label: 'Date de création', input_html: { class: "datepicker" } %>
+    </div>
+      <%= f.input :photos, as: :file,
+                  required: true,
+                  input_html: { multiple: true, autocomplete: "Vos photos", class: 'd-none' },
+                  label_html: { class: 'btn-projects-primary'},
+                  label: '📷 Ajouter des photos' %>
+      <%= f.submit 'Ajouter projet', class: 'btn-projects-primary' %>
+    <% end %>
+  </div>
+</div>
