@@ -1,5 +1,14 @@
 <div class="footer-tibo">
-  <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, a!</p>
+  <p class="footer-text">
+    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, a!
+    <br>
+    <% if user_signed_in? %>
+      <%= link_to '+ Ajouter projet', new_project_path, class: 'footer-link' %>
+      <em><%= link_to 'Se déconnecter', destroy_user_session_path, class: 'footer-link' %></em>
+    <% else %>
+      <%= link_to 'Admin', new_user_session_path, class: 'footer-link' %>
+    <% end %>
+  </p>
   <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, in.</p>
-  <p class="footer-text">Website made by <a class="footer-link" href="www.basilequinchon.com"><strong>Basile Quinchon</strong></a></p>
+  <p class="footer-text">Website made by <a class="footer-link" href="www.basilequinchon.com">Basile Quinchon</a></p>
 </div>

@@ -9,6 +9,7 @@
   color: #33333380;
   text-decoration: none;
   transition: .1s;
+  font-weight: bold;
 
   &:hover {
     text-decoration: none;
@@ -21,7 +22,6 @@
   margin-bottom: 0px;
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
   padding: 0 10%;
 }
