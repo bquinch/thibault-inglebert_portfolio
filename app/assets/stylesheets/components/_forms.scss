@@ -1,0 +1,26 @@
+.login-container {
+  padding: 20% 10%;
+}
+
+.new-project-container {
+  margin: auto;
+  padding-top: 5%;
+}
+
+.new-project-form-container {
+  label {
+    color: #11111180;
+  }
+}
+
+.new-project-container__title,
+.log-in__title {
+  font-size: 1.5rem;
+  color: $blue;
+  font-weight: bold;
+  text-shadow: 0px 4px 16px rgba(0,0,0,0.1);
+}
+
+.form-check-label {
+  color: #33333380;
+}
