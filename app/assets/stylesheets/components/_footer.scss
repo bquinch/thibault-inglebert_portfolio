@@ -1,4 +1,27 @@
 .footer-tibo {
-  height: 40vh;
-  background: linear-gradient(rgba(30,30,30,0.6), rgba(30,30,30,0.7))
+  height: 20vh;
+  background: $blue;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.footer-link {
+  color: #33333380;
+  text-decoration: none;
+  transition: .1s;
+
+  &:hover {
+    text-decoration: none;
+    color: #333333;
+  }
+}
+
+.footer-text {
+  color: #33333380;
+  margin-bottom: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10%;
 }

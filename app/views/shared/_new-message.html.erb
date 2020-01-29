@@ -1,0 +1,29 @@
+<div class="presentation-card d-flex justify-content-between align-items-center my-3">
+  <div data-aos="fade-right" class="new-message-form-container col-sm-10 col-lg-6 p-3">
+    <div class="d-flex justify-content-center align-items-center mb-2">
+      <h1 class="new-message-form-container__title"><strong>ME CONTACTER</strong></h1>
+      <div class='nav-line message-line'></div>
+    </div>
+    <%= simple_form_for @message, url: messages_path do |f| %>
+      <%= render 'shared/flashes' %>
+      <div class="form-inputs">
+        <div class="form-row">
+          <div class="col-5">
+            <%= f.input :name, placeholder: 'Nom...', label: false %>
+          </div>
+          <div class="col-7">
+            <%= f.input :email, placeholder: 'Email...', label: false  %>
+          </div>
+        </div>
+        <%= f.input :subject, placeholder: 'Sujet du message...', label: false  %>
+        <%= f.input :content, placeholder: 'Votre message...', label: false, input_html: { rows: 4 } %>
+      </div>
+      <div class="d-flex justify-content-center align-items-center">
+        <div class='nav-line message-line-left'></div>
+        <%= f.submit 'Envoyer le message', class: 'btn-tibo-primary' %>
+      </div>
+    <% end %>
+  </div>
+  <div data-aos="fade-left" class='presentation-card__image ml-5'><%= image_tag "chat.svg", alt: "chat", width: 300 %></div>
+</div>
+

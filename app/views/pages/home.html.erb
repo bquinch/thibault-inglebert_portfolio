@@ -1,8 +1,13 @@
-<div class="banner-tibo rellax"style="background: linear-gradient(rgba(0,0,0,0.3),rgba(0,0,0,0.3)), url(<%= image_path "bg_nice.jpg", alt: "alttext", width: 1000; %>)">
-  <h1 class="banner-tibo__main-title rellax">THIBAULT INGLEBERT</h1>
-  <p class="banner-tibo__subtitle rellax">Graphic designer</p>
+<div class="banner-border rellax" data-rellax-speed="2">
+  <div class="banner-tibo" style="background: url(<%= image_path "bg_nice.jpg", alt: "alttext", width: 1000; %>)">
+    <h1 class="banner-tibo__main-title rellax animated delay-1s fadeIn">THIBAULT INGLEBERT</h1>
+    <p class="banner-tibo__subtitle rellax animated delay-2s fadeIn">Graphic designer</p>
+  </div>
 </div>
 <%= render 'shared/presentation' %>
-<%= render 'shared/index-list' %>
+<%= render 'shared/projects' %>
+<div class="mb-5"></div>
+<%= render 'shared/new-message' %>
+<div class="mb-5"></div>
 <%= render 'shared/footer' %>
 
