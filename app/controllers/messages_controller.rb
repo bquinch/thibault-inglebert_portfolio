@@ -8,7 +8,7 @@ class MessagesController < ApplicationController
       redirect_to root_url, notice: "Merci pour votre message, je vous répondrai dès que possible !"
       @message.save
     else
-      render :new
+      redirect_to root_url, notice: 'Informations incomplètes'
     end
   end
 

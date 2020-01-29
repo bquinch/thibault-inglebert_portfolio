@@ -1,0 +1,11 @@
+<div class="show-project-card">
+  <div class="carousel">
+    <% project.photos.each_with_index do |photo, index| %>
+      <%= cl_image_tag photo.key, alt: "#{project.client}#{project.category}#{index + 1}" %>
+    <% end %>
+  </div>
+  <div class="show-project-card__category"><h1><%= project.category.upcase %></h1></div>
+  <div class="show-project-card__description"><p><%= project.description %></p></div>
+  <div class="show-project-card__client"><p><%= project.client %></p></div>
+  <div class="show-project-card__date"><p><%= project.date %></p></div>
+</div>

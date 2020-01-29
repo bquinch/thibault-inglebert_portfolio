@@ -52,3 +52,21 @@
     text-decoration: none;
   }
 }
+
+@media(min-width: 400px) and (max-width: 657px) {
+  .index-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media(min-width: 657px) and (max-width: 900px) {
+  .index-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media(max-width: 400px) {
+  .index-container {
+    grid-template-columns: 1fr;
+  }
+}

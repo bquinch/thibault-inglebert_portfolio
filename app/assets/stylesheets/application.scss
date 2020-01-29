@@ -9,6 +9,7 @@
 @import "font-awesome";
 @import "hover.css/css/hover-min.css";
 @import "animate.css/animate.css";
+@import "flickity/css/flickity.css";
 
 // Your CSS partials
 @import "components/index";
@@ -16,4 +17,8 @@
 
 body {
   background: $green-opaque;
+}
+
+html {
+  scroll-behavior: smooth;
 }
