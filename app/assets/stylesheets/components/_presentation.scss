@@ -22,7 +22,8 @@
 
 .presentation-card {
   padding: 0 12.5%;
-  position: relative,
+  position: relative;
+  display: flex;
 }
 
 .presentation-background-left,
@@ -42,4 +43,22 @@
 
 .presentation-background-right {
   clip-path: polygon(0 37%, 100% 46%, 0 41%, 0 42%);
+}
+
+@media(max-width: 500px) {
+  .right-left {
+    flex-direction: column;
+  }
+  .left-right {
+    flex-direction: column-reverse;
+  }
+
+  .presentation-card__image {
+    padding: 3rem;
+
+    img {
+      transform: scale(1.5);
+      margin: 0 auto;
+    }
+  }
 }

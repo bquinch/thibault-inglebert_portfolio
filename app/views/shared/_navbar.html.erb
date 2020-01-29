@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon justify-content-center">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon justify-content-center animated" hidden>
 
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -6,11 +6,18 @@
 
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <%= link_to ".ME", root_url, class: "nav-link" %>
+      <li class="nav-item">
+      <% if current_page?(root_path) %>
+        <a href="#" class='nav-link'>.ME</a>
+      <% else %>
+        <%= link_to '.ME', root_url, class: "nav-link" %>
+      <% end %>
       </li>
       <li class="nav-item">
-        <%= link_to "PROJECTS", projects_path, class: "nav-link" %>
+      <a href="#nav-tab" class='nav-link'>PROJETS</a>
+      </li>
+      <li class="nav-item">
+      <a href="#contact" class='nav-link'>CONTACT</a>
       </li>
       <% if user_signed_in? %>
         <li class="nav-item">

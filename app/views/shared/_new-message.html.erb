@@ -1,11 +1,10 @@
-<div class="presentation-card d-flex justify-content-between align-items-center my-3">
-  <div data-aos="fade-right" class="new-message-form-container col-sm-10 col-lg-6 p-3">
+<div class="presentation-card left-right justify-content-between align-items-center my-3 py-5" id='contact'>
+  <div data-aos="fade-right" class="new-message-form-container p-3">
     <div class="d-flex justify-content-center align-items-center mb-2">
       <h1 class="new-message-form-container__title"><strong>ME CONTACTER</strong></h1>
       <div class='nav-line message-line'></div>
     </div>
     <%= simple_form_for @message, url: messages_path do |f| %>
-      <%= render 'shared/flashes' %>
       <div class="form-inputs">
         <div class="form-row">
           <div class="col-5">

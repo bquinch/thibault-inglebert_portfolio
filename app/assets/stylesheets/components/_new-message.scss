@@ -3,23 +3,9 @@
   color: $blue;
 }
 
-.btn-tibo-primary {
-  background: $blue;
-  color: white !important;
-  padding: .5rem 1rem;
-  font-weight: bold;
-  border: none;
-  border-radius: 8px;
-  transition: backgound .3s;
-  box-shadow: 0px 4px 16px rgba(0,0,0,0.1);
-
-  &:hover {
-    background: $green;
-  }
-}
-
 .form-control {
   border-radius: 8px;
+  border: none;
   box-shadow: 0px 4px 16px rgba(0,0,0,0.1);
 
   &::placeholder {
