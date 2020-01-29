@@ -16,7 +16,7 @@
   }
 
   p {
-    font-size: 1rem;
+    font-size: 1.5rem;
   }
 }
 
@@ -25,13 +25,21 @@
   position: relative,
 }
 
-.presentation-background-left {
+.presentation-background-left,
+.presentation-background-right {
   position: absolute;
   top: 0px;
   left: 0px;
   height: 60vh;
   width: 100vw;
   background-color: $green;
-  clip-path: polygon(100% 21%, 100% 4%, 0 38%, 0 22%);
   z-index: -10;
+}
+
+.presentation-background-left {
+  clip-path: polygon(100% 21%, 100% 4%, 0 38%, 0 22%);
+}
+
+.presentation-background-right {
+  clip-path: polygon(0 37%, 100% 46%, 0 41%, 0 42%);
 }

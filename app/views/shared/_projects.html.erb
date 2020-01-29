@@ -1,0 +1,31 @@
+<div class="nav-tabs-tibo d-flex justify-content-center align-items-center nav mt-5" id="nav-tab" role="tablist">
+  <div class='nav-line'></div>
+  <a class='nav-link nav-tabs-tibo__title active' id="all-tab" data-toggle="tab" href="#nav-all" role="tab" aria-controls="nav-all" aria-selected="true">PROJETS</a>
+  <a class='nav-link nav-tabs-tibo__title' id="marketing-tab" data-toggle="tab" href="#nav-marketing" role="tab" aria-controls="nav-marketing" aria-selected="false">MARKETING</a>
+  <a class='nav-link nav-tabs-tibo__title' id="identity-tab" data-toggle="tab" href="#nav-identity" role="tab" aria-controls="nav-identity" aria-selected="false">IDENTITÉ</a>
+  <a class='nav-link nav-tabs-tibo__title' id="illustration-tab" data-toggle="tab" href="#nav-illustration" role="tab" aria-controls="nav-illustration" aria-selected="false">ILLUSTRATION</a>
+  <a class='nav-link nav-tabs-tibo__title' id="edition-tab" data-toggle="tab" href="#nav-edition" role="tab" aria-controls="nav-edition" aria-selected="false">ÉDITION</a>
+  <a class='nav-link nav-tabs-tibo__title' id="webdesign-tab" data-toggle="tab" href="#nav-webdesign" role="tab" aria-controls="nav-webdesign" aria-selected="false">WEBDESIGN</a>
+  <div class='nav-line'></div>
+</div>
+
+<div class="tab-content" id="myTabContent">
+  <div class="tab-pane show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
+    <%= render 'shared/index-list' %>
+  </div>
+  <div class="tab-pane" id="nav-marketing" role="tabpanel" aria-labelledby="nav-marketing-tab">
+    <%= render 'shared/markerting-projects' %>
+  </div>
+  <div class="tab-pane" id="nav-identity" role="tabpanel" aria-labelledby="nav-identity-tab">
+    <%= render 'shared/identity-projects' %>
+  </div>
+  <div class="tab-pane" id="nav-illustration" role="tabpanel" aria-labelledby="nav-illustration-tab">
+    <%= render 'shared/illustration-projects' %>
+  </div>
+  <div class="tab-pane" id="nav-edition" role="tabpanel" aria-labelledby="nav-edition-tab">
+    <%= render 'shared/edition-projects' %>
+  </div>
+  <div class="tab-pane" id="nav-webdesign" role="tabpanel" aria-labelledby="nav-webdesign-tab">
+    <%= render 'shared/webdesign-projects' %>
+  </div>
+</div>

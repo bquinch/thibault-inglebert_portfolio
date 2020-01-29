@@ -2,6 +2,7 @@
   position: relative;
   flex-grow: 1;
   height: 220px;
+  overflow: hidden;
   background-size: cover !important;
   background-position: center !important;
 }
@@ -20,7 +21,7 @@
   align-items: center;
   text-align: center;
   opacity: 0;
-  transition: all .3s;
+  transition: all .4s;
 
   .index-project-card__client {
     color: rgba(255,255,255,0.96);
@@ -38,6 +39,7 @@
 
   &:hover {
     opacity: 1;
+    transform: scale(1.03);
   }
 }
 
