@@ -3,7 +3,8 @@
   background: $blue;
   display: grid;
   padding: 3rem;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
+  overflow: hidden;
 }
 
 .footer-link {
