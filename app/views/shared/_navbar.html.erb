@@ -1,29 +1,11 @@
-<div class="navbar navbar-expand-sm navbar-light navbar-lewagon justify-content-center animated" hidden>
-
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item">
-      <% if current_page?(root_path) %>
-        <a href="#" class='nav-link'>.ME</a>
-      <% else %>
-        <%= link_to '.ME', root_url, class: "nav-link" %>
-      <% end %>
-      </li>
-      <li class="nav-item">
-      <a href="#nav-tab" class='nav-link'>PROJETS</a>
-      </li>
-      <li class="nav-item">
-      <a href="#contact" class='nav-link'>CONTACT</a>
-      </li>
-      <% if user_signed_in? %>
-        <li class="nav-item">
-          <%= link_to "LOGOUT", destroy_user_session_path, method: :delete, class: "nav-link" %>
-        </li>
-      <% end %>
-    </ul>
+<div class="sidebar-tibo">
+  <div class="sidebar-nav">
+    <i class="fas fa-times"></i>
+    <a href="#">
+      <p>THIBAULT INGLEBERT</p>
+    </a>
+    <a href="#presentation"><p>.MOI</p></a>
+    <a href="#nav-tab"><p>PROJETS</p></a>
+    <a href="#contact"><p>CONTACT</p></a>
   </div>
 </div>

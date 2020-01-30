@@ -9,7 +9,6 @@
     "flatpickr": "^4.6.3",
     "flickity": "^2.2.1",
     "hover.css": "^2.3.2",
-    "jquery": "^3.4.1",
     "popper.js": "^1.16.1",
     "rellax": "^1.12.0"
   },

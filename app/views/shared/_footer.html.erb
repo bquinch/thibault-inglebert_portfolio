@@ -5,7 +5,9 @@
     <% if user_signed_in? %>
       <%= link_to '+ Ajouter projet', new_project_path, class: 'footer-link' %>
       <br>
-      <em><%= link_to 'Se déconnecter', destroy_user_session_path, class: 'footer-link' %></em>
+      <%= link_to 'Editer / Supprimer des projets', projects_path, class: 'footer-link' %>
+      <br>
+      <em><%= link_to "Se déconnecter", destroy_user_session_path, method: :delete, class: "footer-link" %></em>
     <% else %>
       <%= link_to 'Admin', new_user_session_path, class: 'footer-link' %>
     <% end %>

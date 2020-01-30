@@ -1,12 +1,31 @@
-<div class="index-container">
+<div class="project-managment-list">
+  <div class="project-managment-list__titre d-flex align-items-center justify-content-between">
+    <h1><strong>LISTE DES PROJETS</strong></h1>
+    <%= link_to "Revenir à l'acceuil", root_url %>
+  </div>
   <% @projects.each do |project| %>
-    <%= link_to project_path(project) do %>
-      <div class="index-project-card" style="background: url('<%= cl_image_path project.photos.first.key, height: 220, width: 300, crop: :fill %>') !important">
-        <div class="index-project-card-white" style="background: linear-gradient(rgba(255,255,255,0.80), rgba(255,255,255,0.80)), url('<%= cl_image_path project.photos.first.key, height: 220, width: 300, crop: :fill %>') !important">
-          <p class='index-project-card__client'><%= project.client %></p>
-          <p class='index-project-card__category'><%= project.category %></p>
+    <div class="project-managment-card d-flex align-items-center justify-content-between p-3 bg-white border-bottom">
+      <%= link_to project_path(project), target: :blank do %>
+        <div class="project-managment-card__left d-flex">
+          <div class="project-managment-card__image pr-3">
+            <%= cl_image_tag project.photos.first.key, width: 150, crop: :fill %>
+          </div>
+          <div class="project-managment-card__text">
+            <p><strong><%= project.category %></strong></p>
+            <p><%= project.client %></p>
+            <p><%= project.description %></p>
+            <p><%= project.date %></p>
+          </div>
         </div>
-      </div>
-    <% end %>
+        <div class="project-managment-card__update-destroy d-flex align-items-center justify-content-center">
+          <%= link_to project_path(project), data: { confirm: 'Veux-tu vraiment supprimer ce projet ?' }, method: :delete do %>
+            <i class="fas fa-trash-alt pr-2"></i>
+          <% end %>
+          <%= link_to edit_project_path(project) do %>
+            <i class="far fa-edit"></i>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
   <% end %>
 </div>

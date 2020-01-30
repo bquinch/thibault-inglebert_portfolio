@@ -1,0 +1,34 @@
+<div class="new-project-container my-3 col-md-6 col-sm-12">
+  <div class="new-project-form-container text-center">
+    <div class="d-flex justify-content-center align-items-center mb-2">
+      <div class='nav-line message-line-left'></div>
+      <h1 class='new-project-container__title text-center'>MODIFIER UN PROJET</h1>
+      <div class='nav-line message-line'></div>
+    </div>
+    <%= simple_form_for @project, html: { method: :put } do |f| %>
+    <div class="form-inputs text-justify">
+      <%= f.input :description, placeholder: 'Description du projet' %>
+      <%= f.input :category, label: 'Catégorie', collection: [
+          'Marketing',
+          'Identité visuelle',
+          'Illustration',
+          'Édition',
+          'Webdesign'
+        ] %>
+      <%= f.input :client, placeholder: 'Nom du client, de la marque' %>
+      <%= f.input :date, as: :string, label: 'Date de création', input_html: { class: "datepicker" } %>
+    </div>
+      <%= f.input :photos, as: :file,
+                  required: true,
+                  input_html: { multiple: true, autocomplete: "Vos photos", class: 'd-none' },
+                  label_html: { class: 'btn-tibo-primary'},
+                  label: '📷 Ajouter des photos' %>
+    <div class="d-flex justify-content-center align-items-center mb-2">
+      <div class='nav-line message-line-left'></div>
+      <%= f.submit 'Valider', class: 'btn-tibo-primary' %>
+      <div class='nav-line message-line'></div>
+    </div>
+    <% end %>
+  </div>
+</div>
+
