@@ -25,15 +25,15 @@ class ProjectsController < ApplicationController
 
   def update
     if @project.update(project_params)
-      redirect_to project_path(@project), notice: "Project updated"
+      redirect_to projects_path, notice: "Projet modifié"
     else
-      render :show, notice: "Couldn't update"
+      render :index, notice: "Erreur lors de la modification"
     end
   end
 
   def destroy
     @project.destroy
-    redirect_to projects_path, notice: "Your project has been deleted"
+    redirect_to projects_path, notice: "Le projet a été supprimé"
   end
 
   private

@@ -8,9 +8,9 @@
 .banner-tibo {
   width: 100vw;
   height: 113vh;
-  position: absolute;
+  // position: absolute;
   background-size: cover !important;
-  background-position: 0 0% !important;
+  background-position: center 0% !important;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -22,6 +22,9 @@
     background: $green;
     padding: .5rem 1rem;
     font-size: 3rem;
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.1);
+    text-align: center;
+    width: fit-content;
   }
 
   .banner-tibo__main-title,
@@ -34,5 +37,27 @@
     background: $blue;
     padding: .25rem .5rem;
     font-size: 1.5rem;
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.1);
+  }
+
+  .banner-tibo__links {
+    flex-wrap: wrap;
+  }
+
+  .banner-tibo__links__projets,
+  .banner-tibo__links__presentation,
+  .banner-tibo__links__contact {
+    color: white;
+    font-weight: bold;
+    background: $green;
+    padding: .25rem .5rem;
+    font-size: 1.5rem;
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.1);
+    text-decoration: none;
+    transition: background .3s;
+
+    &:hover {
+      background: $blue;
+    }
   }
 }

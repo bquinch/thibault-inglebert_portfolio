@@ -5,7 +5,7 @@
 
 .show-project-card__text {
   position: absolute;
-  bottom: 10%;
+  bottom: 5%;
   left: 10%;
 }
 
@@ -57,7 +57,7 @@
 }
 
 .carousel-cell {
-  width: 70%;
+  width: 90%;
   height: 100vh;
   /* flex-box, center image in cell */
   display: -webkit-box;
@@ -102,6 +102,14 @@
 @media screen and ( min-width: 960px ) {
   .carousel-cell {
     width: 60%;
+  }
+}
+
+@media(max-width: 768px) {
+  .show-project-card__text {
+    left: 5%;
+    bottom: 5%;
+    width: 90vw;
   }
 }
 

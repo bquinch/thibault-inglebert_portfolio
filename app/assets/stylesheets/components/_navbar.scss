@@ -1,29 +1,78 @@
-.navbar-lewagon {
-  position: sticky;
-  top: 0px;
-  z-index: 100;
-  margin-top: -47px;
-  justify-content: space-between;
-  background: rgba(255,255,255,0.75);
-  font-weight: bold;
+#menu-toggle {
+  position: fixed;
+  top: 15%;
+  z-index: 1;
+  left: 2%;
+
+  &:hover {
+    cursor: pointer;
+  }
+
+  i {
+    margin-left: 3%;
+    z-index: 10;
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+    background: $green-opaque;
+    border-radius: 8px;
+    padding: .25rem .5rem;
+    box-shadow: 0px 4px 16px rgba(0,0,0,0.1);
+    transition: all .3s;
+
+    &:hover {
+      background: $green;
+      box-shadow: 0px 4px 16px rgba(0,0,0,0.2);
+      transform: scale(1.01);
+    }
+  }
 }
 
-.navbar-lewagon .navbar-collapse {
-  flex-grow: 0;
+.fa-times {
+  cursor: pointer;
+  position: absolute;
+  bottom: 5%;
+  right: 8%;
+  color: white;
 }
 
-.navbar-lewagon .navbar-brand img {
-  width: 40px;
-}
+.sidebar-tibo {
+  position: fixed;
+  top: 10%;
+  display: none;
+  opacity: 0;
+  z-index: 1;
+  list-style: none;
+  padding: 2rem 0;
+  border-radius: 0 8px 8px 0;
+  background: $green-opaque;
+  box-shadow: 0px 4px 16px rgba(0,0,0,0.1);
+  transition: opacity .3s;
 
-.nav-item a{
-  color: rgb(117,183,158) !important;
-  padding: 4px 8px;
-  background: transparent;
-  transition: .3s;
-}
+  &.active {
+    display: block;
+    opacity: 1;
+  }
 
-.nav-item a:hover {
-  background: rgb(117,183,158) !important;
-  color: rgb(255,255,255) !important;
+  .sidebar-nav {
+    list-style: none;
+    padding: 0px;
+    margin: 0px;
+  }
+
+  a {
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    width: 100%;
+
+    &:hover p {
+      background: $green;
+    }
+
+    p {
+      padding: .5rem 1rem;
+      margin-bottom: 0px;
+    }
+  }
 }

@@ -1,20 +1,28 @@
 const navbarToggle = () => {
   let position = 0;
 
-  const navbarLeWagon = document.querySelector('.navbar-lewagon');
+  const toggle = document.getElementById('menu-toggle');
+  const menu = document.querySelector('.sidebar-tibo');
   window.addEventListener('scroll', (event) => {
     let position = window.scrollY;
     if (position > 600) {
-      navbarLeWagon.removeAttribute('hidden');
-      navbarLeWagon.classList.add('fadeIn');
-      if (document.querySelector('.navbar-lewagon.fadeIn')) {
-        navbarLeWagon.classList.remove('fadeOut');
+      toggle.removeAttribute('hidden');
+      menu.removeAttribute('hidden');
+      toggle.classList.add('fadeIn');
+      menu.classList.add('fadeIn');
+      if (document.querySelector('.toggle.fadeIn')) {
+        toggle.classList.remove('fadeOut');
+      } if (document.querySelector('.sidebar-tibo')) {
+        menu.classList.remove('fadeOut');
       }
     }
     if (position < 600) {
-      navbarLeWagon.classList.remove('fadeIn');
-      navbarLeWagon.classList.add('fadeOut');
-      navbarLeWagon.setAttribute('hidden', true);
+      toggle.classList.remove('fadeIn');
+      menu.classList.remove('fadeIn');
+      toggle.classList.add('fadeOut');
+      menu.classList.add('fadeOut');
+      toggle.setAttribute('hidden', true);
+      menu.setAttribute('hidden', true);
     }
   });
 };

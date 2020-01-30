@@ -13,6 +13,6 @@
       <div class="show-project-card__description"><p><%= @project.description %></p></div>
     </div>
     <div class="show-project-card__date mb-2"><p><%= I18n.t("date.month_names")[Date.today.month] %> <%= @project.date.year %></p></div>
-    <%= link_to 'RETOUR', root_url, class: 'btn-tibo-primary' %>
+    <%= link_to 'RETOUR', root_url(anchor: 'nav-tab'), class: 'btn-tibo-secondary' %>
   </div>
 </div>
