@@ -28,30 +28,29 @@
   }
 }
 
-.fa-times {
-  cursor: pointer;
-  position: absolute;
-  bottom: 5%;
-  right: 8%;
-  color: white;
-}
-
 .sidebar-tibo {
   position: fixed;
-  top: 8%;
-  display: none;
-  opacity: 0;
+  top: 25%;
+  opacity: 1;
   z-index: 1;
+  transform: translateX(-200px);
+  max-width: 230px;
   list-style: none;
   padding: 2rem 0;
   border-radius: 0 8px 8px 0;
   background: $green-opaque;
   box-shadow: 0px 4px 16px rgba(0,0,0,0.1);
-  transition: opacity .3s;
+  transition: all .3s ease;
 
-  &.active {
-    display: block;
-    opacity: 1;
+  &.hidden-top {
+    opacity: 0;
+    transition: opacity .3s;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    transform: translateX(0px);
   }
 
   .sidebar-nav {
@@ -60,15 +59,15 @@
     margin: 0px;
   }
 
+  .hvr-sweep-to-right:before {
+    background: $green !important;
+  }
+
   a {
     color: white;
     font-weight: bold;
     text-decoration: none;
     width: 100%;
-
-    &:hover p {
-      background: $green;
-    }
 
     p {
       padding: .5rem 1rem;
