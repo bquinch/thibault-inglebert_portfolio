@@ -1,16 +1,16 @@
 const initNavbar = () => {
-  const toggleIcon = document.getElementById('menu-toggle');
-  const closeIcon = document.querySelector('.fa-times');
+  let position = 0;
+
   const sideBar = document.querySelector('.sidebar-tibo');
-  toggleIcon.addEventListener('click', (event) => {
-    event.preventDefault;
-    sideBar.classList.toggle('active');
-    toggleIcon.setAttribute('hidden', true);
+  window.addEventListener('scroll', (event) => {
+    let position = window.scrollY;
+    if (position > 600) {
+      sideBar.classList.remove('hidden-top');
+    }
+    if (position < 600) {
+      sideBar.classList.add('hidden-top');
+    }
   });
-  closeIcon.addEventListener('click', (event) => {
-    sideBar.classList.toggle('active');
-    toggleIcon.removeAttribute('hidden');
-  })
 }
 
 export { initNavbar };
