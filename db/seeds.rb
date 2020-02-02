@@ -2,6 +2,7 @@ project1 = Project.new(
   category: "Marketing",
   description: "Invitation pour un petit déjeuner professionel via mailing & Emailing",
   client: "2FPCO",
+  priority: 1,
   date: Date.new(2013, 8, 20)
 )
 
@@ -24,6 +25,7 @@ project2 = Project.new(
   category: "Identité visuelle",
   description: "Faire-part de mariage Violette et Aurélien",
   client: "Particulier",
+  priority: 2,
   date: Date.new(2013, 8, 23)
 )
 
@@ -48,6 +50,7 @@ project3 = Project.new(
   category: "Illustration",
   description: "Création & réalisation de T-Shirts",
   client: "Excel",
+  priority: 3,
   date: Date.new(2013, 9, 2)
 )
 
@@ -71,6 +74,7 @@ project4 = Project.new(
   category: "Identité visuelle",
   description: "Création & réalisation de cartes de visite",
   client: "2FPCO",
+  priority: 2,
   date: Date.new(2013, 9, 2)
 )
 
@@ -93,6 +97,7 @@ project5 = Project.new(
   category: "Édition",
   description: "Création de l'agenda 2014",
   client: "RTE",
+  priority: 1,
   date: Date.new(2013, 9, 20)
 )
 
@@ -116,6 +121,7 @@ project6 = Project.new(
   category: "Marketing",
   description: "Présentation Powerpoint de 32 pages dans le cadre d'une prospection client auprès de BMW",
   client: "Promedif",
+  priority: 4,
   date: Date.new(2013, 12, 10)
 )
 
@@ -140,6 +146,7 @@ project7 = Project.new(
   category: "Identité visuelle",
   description: "Logo pour un bar piscine à Saint-Gervais-les-Bains",
   client: "La Pistoche",
+  priority: 1,
   date: Date.new(2014, 6, 1)
 )
 
@@ -162,6 +169,7 @@ project8 = Project.new(
   category: "Webdesign",
   description: "Boutique en ligne",
   client: "Secours Populaire",
+  priority: 2,
   date: Date.new(2014, 4, 15)
 )
 
@@ -185,6 +193,7 @@ project9 = Project.new(
   category: "Édition",
   description: "Retouche & montage photo",
   client: "Particulier",
+  priority: 3,
   date: Date.new(2014, 4, 15)
 )
 
@@ -208,6 +217,7 @@ project10 = Project.new(
   category: "Identité visuelle",
   description: "Réalisation d’un faire-part de mariage",
   client: "Particulier",
+  priority: 5,
   date: Date.new(2015, 4, 15)
 )
 
@@ -232,6 +242,7 @@ project11 = Project.new(
   category: "Édition",
   description: "Bon de commande à destination des libraires/revendeurs à l’occasion des 40 ans",
   client: "Fluide Glacial",
+  priority: 2,
   date: Date.new(2015, 4, 28)
 )
 

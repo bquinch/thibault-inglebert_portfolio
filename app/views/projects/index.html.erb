@@ -3,7 +3,7 @@
     <h1><strong>LISTE DES PROJETS</strong></h1>
     <%= link_to "Revenir à l'acceuil", root_url %>
   </div>
-  <% @projects.each do |project| %>
+  <% @projects.order('priority desc').each do |project| %>
     <div class="project-managment-card d-flex align-items-center justify-content-between p-3 bg-white border-bottom">
       <%= link_to project_path(project), target: :blank do %>
         <div class="project-managment-card__left d-flex">

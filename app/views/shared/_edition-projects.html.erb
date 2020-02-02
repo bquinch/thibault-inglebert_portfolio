@@ -1,5 +1,5 @@
 <div class="index-container">
-  <% @projects.select { |x| x.category == 'Édition' } .each do |project| %>
+  <% @projects.order('priority desc').select { |x| x.category == 'Édition' } .each do |project| %>
     <%= link_to project_path(project) do %>
       <div class="d-flex">
         <div class="index-project-card animated fadeIn" data-aos="fade-up" style="background: url('<%= cl_image_path project.photos.first.key, height: 220, width: 300, crop: :fill %>')">

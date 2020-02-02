@@ -20,8 +20,6 @@
 
   p, h1 {
     margin-bottom: 0px;
-    font-weight: bold;
-    font-size: 1.25rem;
     margin-bottom: 0px;
   }
 }
@@ -31,20 +29,32 @@
   background: $green;
   color: white;
   transform: skew(-10deg);
+
+  p {
+    font-weight: bold;
+  }
 }
 
 .show-project-card__description {
   background: white;
   color: $blue;
   transform: skew(10deg);
+  text-align: justify;
+
+  p {
+    font-weight: bold;
+  }
+}
+
+.show-project-card__category p {
+  font-size: 1rem;
 }
 
 .show-project-card__client {
   background: $red;
-  // padding: .5rem 1rem;
+  font-weight: bold;
   color: $white;
-  text-align: end;
-  transform: skew(10deg);
+  transform: skew(-10deg);
 }
 
 .show-project-card__date p {
