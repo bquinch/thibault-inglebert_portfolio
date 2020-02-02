@@ -1,6 +1,6 @@
 <div class="footer-tibo">
   <p class="footer-text">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam, a!
+    ADMINISTRATION
     <br>
     <% if user_signed_in? %>
       <%= link_to '+ Ajouter projet', new_project_path, class: 'footer-link' %>
@@ -12,6 +12,20 @@
       <%= link_to 'Admin', new_user_session_path, class: 'footer-link' %>
     <% end %>
   </p>
+  <p class="footer-text">
+    INFORMATIONS
+    <br>
+    <a href="tel:+33632903860" class='footer-link'>Joindre par téléphone</a>
+    <br>
+    <a href="https://www.linkedin.com/in/thibault-inglebert-75716664/" class='footer-link'>Linkedin</a>
+
+  </p>
   <!-- <p class="footer-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam, in.</p> -->
-  <p class="footer-text">Website made by <a class="footer-link" href="www.basilequinchon.com">Basile Quinchon</a></p>
+  <p class="footer-text">
+    MENTIONS
+    <br>
+    © janvier 2020
+    <br>
+    Site construit par <a class="footer-link" href="www.basilequinchon.com">Basile Quinchon</a>
+  </p>
 </div>
