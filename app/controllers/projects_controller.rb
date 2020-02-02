@@ -44,6 +44,7 @@ class ProjectsController < ApplicationController
       :description,
       :client,
       :date,
+      :priority,
       photos: []
     )
   end
