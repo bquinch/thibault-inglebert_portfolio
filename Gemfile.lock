@@ -70,6 +70,8 @@ GEM
     dotenv-rails (2.7.5)
       dotenv (= 2.7.5)
       railties (>= 3.2, < 6.1)
+    email_validator (2.0.1)
+      activemodel
     erubi (1.9.0)
     execjs (2.7.0)
     ffi (1.12.1)
@@ -217,6 +219,7 @@ DEPENDENCIES
   cloudinary (~> 1.12.0)
   devise
   dotenv-rails
+  email_validator
   font-awesome-sass (~> 5.6.1)
   jbuilder (~> 2.0)
   listen (~> 3.0.5)
