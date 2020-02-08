@@ -1,14 +1,12 @@
 <div class="index-container">
   <% @projects.order('priority desc').each do |project| %>
-    <%= link_to project_path(project) do %>
-      <div class="d-flex">
-        <div class="index-project-card animated fadeIn" data-aos="fade-up" style="background: url('<%= cl_image_path project.photos.first.key, height: 220, width: 300, crop: :fill %>')">
-          <div class="index-project-card-white" style="background: linear-gradient(rgba(117,183,158,0.79), rgba(117,183,158,0.79)), url('<%= cl_image_path project.photos.first.key, height: 220, width: 300, crop: :fill %>')">
-            <p class='index-project-card__client'><%= project.client %></p>
-            <p class='index-project-card__category'><%= project.category %></p>
-          </div>
+    <div class="d-flex">
+      <div class="index-project-card animated fadeIn" data-toggle="modal" data-target="#modal<%= project.id %>" data-aos="fade-up" style="background: url('<%= cl_image_path project.photos.first.key, height: 220, width: 300, crop: :fill %>')">
+        <div class="index-project-card-white" style="background: linear-gradient(rgba(106,140,175,0.79), rgba(106,140,175,0.79)), url('<%= cl_image_path project.photos.first.key, height: 220, width: 300, crop: :fill %>')">
+          <p class='index-project-card__client'><%= project.client %></p>
+          <p class='index-project-card__category'><%= project.category %></p>
         </div>
       </div>
-    <% end %>
+    </div>
   <% end %>
 </div>

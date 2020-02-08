@@ -9,6 +9,7 @@
   <div class='nav-line'></div>
 </div>
 
+<!-- PROJECTS-TABS -->
 <div class="tab-content" id="myTabContent">
   <div class="tab-pane show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
     <%= render 'shared/index-list' %>
@@ -29,3 +30,15 @@
     <%= render 'shared/webdesign-projects' %>
   </div>
 </div>
+
+<!-- MODALS -->
+<% @projects.each do |project| %>
+  <div class="modal fade bd-example-modal-lg" id='modal<%= project.id %>' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <% @project = project %>
+        <%= render 'shared/project-carousel', locals: { project: project } %>
+      </div>
+    </div>
+  </div>
+<% end %>

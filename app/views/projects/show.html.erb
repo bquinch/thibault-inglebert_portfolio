@@ -1,12 +1,19 @@
 <div class="show-project-card">
-  <div class="carousel js-flickity">
+  <div class="carousel carousel-main">
     <% @project.photos.each_with_index do |photo, index| %>
     <div class="carousel-cell">
       <%= cl_image_tag photo.key, alt: "#{@project.client}#{@project.category}#{index + 1}" %>
     </div>
     <% end %>
   </div>
-  <div class="show-project-card__text">
+  <div class="carousel carousel-nav">
+    <% @project.photos.each_with_index do |photo, index| %>
+    <div class="carousel-cell">
+      <%= cl_image_tag photo.key, alt: "#{@project.client}#{@project.category}#{index + 1}" %>
+    </div>
+    <% end %>
+  </div>
+  <!-- <div class="show-project-card__text">
     <div class="d-flex">
       <div class="show-project-card__category"><p><%= @project.category.upcase %></p></div>
       <div class="show-project-card__client"><p><%= @project.client %></p></div>
@@ -14,5 +21,5 @@
     <div class="show-project-card__description"><p><%= @project.description %></p></div>
     <div class="show-project-card__date ml-auto"><p><%= I18n.t("date.month_names")[Date.today.month] %> <%= @project.date.year %></p></div>
     <%= link_to 'RETOUR', root_url(anchor: 'nav-tab'), class: 'btn-tibo-secondary' %>
-  </div>
+  </div> -->
 </div>
