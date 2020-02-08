@@ -4,7 +4,7 @@
 
   &:hover,
   &.active {
-    background: $green;
+    background: $blue;
     color: white;
   }
 }
@@ -13,7 +13,7 @@
   height: 2px;
   margin: 1rem;
   flex-grow: 1;
-  background: $green;
+  background: $blue;
   border-radius: 2px;
 
   &.message-line {
