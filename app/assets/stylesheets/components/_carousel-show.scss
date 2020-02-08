@@ -60,4 +60,24 @@ body.modal-open .all-content{
     max-height: 30vh !important;
     margin: 25% auto;
   }
+
+  .carousel-control-next,
+  .carousel-control-prev {
+    top: auto;
+  }
+
+  .carousel-control-prev {
+    right: 50%;
+    left: auto;
+  }
+
+  .carousel-control-next {
+    left: 50%;
+    right: auto;
+  }
+
+  .carousel-control-prev-icon,
+  .carousel-control-next-icon {
+    bottom: 0;
+  }
 }
