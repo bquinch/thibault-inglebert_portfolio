@@ -4,5 +4,5 @@ class Project < ApplicationRecord
   validates :description, presence: true
   validates :date, presence: true
   validates :client, presence: true
-  validates :priority, presence: true, inclusion: { in: (1..5).to_a }
+  validates :priority, presence: true, inclusion: { in: (1..20).to_a }
 end

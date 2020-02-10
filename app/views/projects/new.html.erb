@@ -17,7 +17,7 @@
         ] %>
       <%= f.input :client, placeholder: 'Nom du client, de la marque' %>
       <%= f.input :date, as: :string, label: 'Date de création', input_html: { class: "datepicker" } %>
-      <%= f.input :priority, collection: (1..5).to_a, label: 'Priorité' %>
+      <%= f.input :priority, collection: (1..20).to_a, label: 'Priorité' %>
     </div>
       <%= f.input :photos, as: :file,
                   required: true,
