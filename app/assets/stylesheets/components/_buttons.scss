@@ -1,6 +1,6 @@
 .btn-tibo-primary {
-  background: $blue;
-  color: white !important;
+  background: #fff;
+  color: $blue !important;
   padding: .5rem 1rem;
   font-weight: bold;
   border: none;
@@ -11,12 +11,14 @@
 
   &:hover {
     background: $blue;
+    color: white !important;
+    // transform: scale(1.1);
   }
 }
 
 .btn-tibo-secondary {
-  background: $blue;
-  color: white !important;
+  background: #fff;
+  color: $blue !important;
   padding: .5rem 1rem;
   font-weight: bold;
   border: none;
@@ -27,5 +29,6 @@
 
   &:hover {
     background: $blue;
+    color: white !important;
   }
 }
