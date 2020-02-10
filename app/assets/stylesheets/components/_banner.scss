@@ -29,7 +29,6 @@
 
   .banner-tibo__main-title,
   .banner-tibo__subtitle {
-    font-weight: bold;
     color: rgba(255,255,255,0.96);
   }
 
@@ -47,17 +46,18 @@
   .banner-tibo__links__projets,
   .banner-tibo__links__presentation,
   .banner-tibo__links__contact {
-    color: white;
+    color: $blue;
     font-weight: bold;
-    background: $blue;
+    background: white;
     padding: .25rem .5rem;
-    font-size: 1.5rem;
+    font-size: 1.25rem;
     box-shadow: 0px 4px 16px rgba(0,0,0,0.1);
     text-decoration: none;
     transition: background .3s;
 
     &:hover {
       background: $blue;
+      color: white;
     }
   }
 }

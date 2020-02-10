@@ -19,6 +19,27 @@
   }
 }
 
+.description {
+  position: absolute;
+  bottom: 1rem;
+  z-index: 3000;
+  font-weight: bold;
+  box-shadow: 0px 4px 16px rgba(0,0,0,0.3);
+  font-size: .9rem;
+}
+
+.description__project {
+  color: white;
+  background: $blue;
+  padding: .25rem .5rem;
+}
+
+.description__client {
+  color: $blue;
+  background: white;
+  padding: .25rem .5rem;
+}
+
 .carousel-item {
   transition: transform .6 ease-in-out;
 }
