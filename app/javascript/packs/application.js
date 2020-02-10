@@ -5,8 +5,12 @@ import 'aos/dist/aos.css';
 import { initFlatPickr } from "plugins/flatpickr.js";
 import { initRellax } from "plugins/rellax.js";
 import { initNavbar } from "plugins/init_navbar.js";
+import { previewImageOnFileSelect } from "plugins/preview_image.js";
 
 initFlatPickr();
+if (document.getElementById('browse')) {
+  previewImageOnFileSelect();
+}
 
 if (document.querySelector('.sidebar-tibo')) {
   initNavbar();

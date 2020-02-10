@@ -21,9 +21,12 @@
     </div>
       <%= f.input :photos, as: :file,
                   required: true,
-                  input_html: { multiple: true, autocomplete: "Vos photos", class: 'd-none' },
+                  input_html: { multiple: true, autocomplete: "Vos photos", class: 'd-none', id: 'browse' },
                   label_html: { class: 'btn-tibo-primary'},
                   label: '📷 Ajouter des photos' %>
+      <!-- <input id="browse" type="file" onchange="previewFiles()" multiple> -->
+      <div id="preview" class='mb-2'></div>
+
     <div class="d-flex justify-content-center align-items-center mb-2">
       <div class='nav-line message-line-left'></div>
       <%= f.submit 'Valider', class: 'btn-tibo-primary' %>
