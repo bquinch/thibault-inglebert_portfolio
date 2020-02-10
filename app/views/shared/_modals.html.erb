@@ -1,11 +1,13 @@
 <!-- MODALS -->
-<% @projects.each do |project| %>
-  <div class="modal fade bd-example-modal-lg" id='modal<%= project.id %>' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
-    <div class="modal-dialog">
-      <div class="modal-content">
-        <% @project = project %>
-        <%= render 'shared/project-carousel', locals: { project: project } %>
+<% if @projects %>
+  <% @projects.each do |project| %>
+    <div class="modal fade bd-example-modal-lg" id='modal<%= project.id %>' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <% @project = project %>
+          <%= render 'shared/project-carousel', locals: { project: project } %>
+        </div>
       </div>
     </div>
-  </div>
+  <% end %>
 <% end %>
