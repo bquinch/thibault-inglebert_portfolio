@@ -8,7 +8,10 @@
 
 .presentation-card__text {
   color: #777777;
-  mix-blend-mode: screen;
+
+  &.mix_blend {
+    mix-blend-mode: difference;
+  }
 
   h1 {
     font-size: 1.25rem;
