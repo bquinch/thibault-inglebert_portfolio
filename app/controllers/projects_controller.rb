@@ -17,7 +17,7 @@ class ProjectsController < ApplicationController
   def create
     @project = Project.new(project_params)
     if @project.save
-      redirect_to project_path(@project)
+      redirect_to root_url(anchor: 'nav-tab')
     else
       render :new
     end
