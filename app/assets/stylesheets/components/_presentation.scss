@@ -7,7 +7,8 @@
 }
 
 .presentation-card__text {
-  color: #33333380;
+  color: #777777;
+  mix-blend-mode: screen;
 
   h1 {
     font-size: 1.25rem;
@@ -40,7 +41,7 @@
 }
 
 .presentation-background-left {
-  clip-path: polygon(100% 21%, 100% 4%, 0 38%, 0 22%);
+  clip-path: polygon(100% 9%, 0 18%, 100% 12%);
 }
 
 .presentation-background-right {
