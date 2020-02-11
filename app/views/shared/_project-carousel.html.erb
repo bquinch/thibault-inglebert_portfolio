@@ -4,7 +4,8 @@
     <div class="carousel-inner" role="listbox">
       <div class="carousel-item active">
         <% if @project.photos.first.video? %>
-          <video class="d-block" controls><source src="<%= cl_video_path @project.photos.first.key %>" type="video/mp4" alt="<%= "#{@project.id}-0" %>"></video>
+          <!-- <video class="d-block" controls><source src="<%#= cl_video_path @project.photos.first.key %>" type="video/mp4" alt="<%#= "#{@project.id}-0" %>" quality='eco'></video> -->
+          <%= cl_video_tag @project.photos.first.key, controls: true, q_auto: :eco, overlay: {font_family: "arial", font_size: 100, :text=>"Propriété de Thibault Inglebert" }, color: "#ffffff20" %>
         <% else %>
           <img class="d-block" src="<%= cl_image_path @project.photos.first.key %>" alt="<%= "#{@project.id}-0" %>">
         <% end %>
