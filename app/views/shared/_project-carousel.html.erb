@@ -4,7 +4,7 @@
     <div class="carousel-inner" role="listbox">
       <div class="carousel-item active">
         <% if @project.photos.first.video? %>
-          <video class="d-block" controls autoplay><source src="<%= cl_video_path @project.photos.first.key %>" type="video/mp4" alt="<%= "#{@project.id}-0" %>"></video>
+          <video class="d-block" controls><source src="<%= cl_video_path @project.photos.first.key %>" type="video/mp4" alt="<%= "#{@project.id}-0" %>"></video>
         <% else %>
           <img class="d-block" src="<%= cl_image_path @project.photos.first.key %>" alt="<%= "#{@project.id}-0" %>">
         <% end %>
@@ -17,10 +17,10 @@
     </div>
     <!--Controls-->
     <% unless @project.photos.first.video? %>
-    <div class="description d-flex mx-auto">
-      <div class="description__project"><%= @project.description %> </div>
-      <div class='description__client'><%= @project.client %></div>
-    </div>
+      <div class="description d-flex mx-auto">
+        <div class="description__project"><%= @project.description %> </div>
+        <div class='description__client'><%= @project.client %></div>
+      </div>
       <a class="carousel-control-prev" href="#carousel-thumb<%= @project.id %>" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
