@@ -5,6 +5,12 @@
   overflow: hidden;
   background-size: cover !important;
   background-position: center !important;
+
+  video {
+    max-width: 360px;
+    width: 100%;
+    object-fit: cover !important;
+  }
 }
 
 .index-project-card-white {
