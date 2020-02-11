@@ -3,7 +3,11 @@
         <!--Slides-->
     <div class="carousel-inner" role="listbox">
       <div class="carousel-item active">
-        <img class="d-block" src="<%= cl_image_path @project.photos.first.key %>" alt="<%= "#{@project.id}-0" %>">
+        <% if @project.photos.first.video? %>
+          <video class="d-block" controls autoplay><source src="<%= cl_video_path @project.photos.first.key %>" type="video/mp4" alt="<%= "#{@project.id}-0" %>"></video>
+        <% else %>
+          <img class="d-block" src="<%= cl_image_path @project.photos.first.key %>" alt="<%= "#{@project.id}-0" %>">
+        <% end %>
       </div>
       <% @project.photos[1..-1].each_with_index do |photo, index| %>
         <div class="carousel-item">
@@ -12,27 +16,29 @@
       <% end %>
     </div>
     <!--Controls-->
-    <a class="carousel-control-prev" href="#carousel-thumb<%= @project.id %>" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#carousel-thumb<%= @project.id %>" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    <% unless @project.photos.first.video? %>
     <div class="description d-flex mx-auto">
       <div class="description__project"><%= @project.description %> </div>
       <div class='description__client'><%= @project.client %></div>
     </div>
+      <a class="carousel-control-prev" href="#carousel-thumb<%= @project.id %>" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+      </a>
+      <a class="carousel-control-next" href="#carousel-thumb<%= @project.id %>" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+      </a>
 
-    <!--/.Controls-->
-    <ol class="carousel-indicators">
-      <li data-target="#carousel-thumb<%= @project.id %>" data-slide-to="<%= 0 %>" class="active"> <img class="d-block w-100" src="<%= cl_image_path @project.photos.first.key %>"
-          class="img-fluid"></li>
-      <% @project.photos[1..-1].each_with_index do |photo, index| %>
-      <li data-target="#carousel-thumb<%= @project.id %>" data-slide-to="<%= index + 1%>"> <img class="d-block w-100" src="<%= cl_image_path photo.key %>"
-          class="img-fluid"></li>
-      <% end %>
-    </ol>
+      <!--/.Controls-->
+      <ol class="carousel-indicators">
+        <li data-target="#carousel-thumb<%= @project.id %>" data-slide-to="<%= 0 %>" class="active"> <img class="d-block w-100" src="<%= cl_image_path @project.photos.first.key %>"
+            class="img-fluid"></li>
+        <% @project.photos[1..-1].each_with_index do |photo, index| %>
+        <li data-target="#carousel-thumb<%= @project.id %>" data-slide-to="<%= index + 1%>"> <img class="d-block w-100" src="<%= cl_image_path photo.key %>"
+            class="img-fluid"></li>
+        <% end %>
+      </ol>
+    <% end %>
   </div>
 </div>

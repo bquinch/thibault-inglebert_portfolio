@@ -45,6 +45,10 @@
 
 .carousel-item {
   transition: transform .6 ease-in-out;
+
+  video {
+    width: 100%;
+  }
 }
 
 .carousel-control-prev-icon,
