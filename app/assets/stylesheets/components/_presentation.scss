@@ -1,5 +1,5 @@
 .presentation-card__image {
-  flex: 0 0 40%;
+  flex-grow: 1;
 
   img {
     width: 100%;
@@ -8,6 +8,7 @@
 
 .presentation-card__text {
   color: #777777;
+  flex: 0 0 70%;
 
   &.mix_blend {
     mix-blend-mode: difference;
@@ -50,10 +51,11 @@
   clip-path: polygon(0 37%, 100% 46%, 0 41%, 0 42%);
 }
 
-@media(max-width: 500px) {
+@media(max-width: 756px) {
   .right-left {
     flex-direction: column;
   }
+
   .left-right {
     flex-direction: column-reverse;
   }
@@ -63,7 +65,7 @@
     margin: 0px !important;
 
     img {
-      transform: scale(1.5);
+      // transform: scale(1.5);
       margin: 0 auto;
     }
   }
