@@ -9,11 +9,11 @@
     <div class="form-inputs text-justify">
       <%= f.input :description, placeholder: 'Description du projet' %>
       <%= f.input :category, label: 'Catégorie', collection: [
-          'Marketing',
-          'Identité visuelle',
-          'Illustration',
+          'Événementiel',
+          'Univers graphique',
+          'Motion Design',
           'Édition',
-          'Webdesign'
+          'Numérique'
         ] %>
       <%= f.input :client, placeholder: 'Nom du client, de la marque' %>
       <%= f.input :date, as: :string, label: 'Date de création', input_html: { class: "datepicker" } %>
