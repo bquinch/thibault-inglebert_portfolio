@@ -1,10 +1,6 @@
 .carousel-item img,
 .modal-dialog {
-  max-width: 80vw !important;
-  width: 100%;
-  height: 80vh !important;
-  max-height: 80vh !important;
-  margin: 2vh auto;
+  max-width: 70vw !important;
 }
 
 .carousel-item img {
@@ -30,8 +26,8 @@
 
 .description {
   position: absolute;
-  bottom: 1rem;
-  left: 10%;
+  bottom: 0px;
+  left: 0px;
   z-index: 3000;
   font-weight: bold;
   font-size: .9rem;
