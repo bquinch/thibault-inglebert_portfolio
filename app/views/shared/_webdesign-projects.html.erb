@@ -2,11 +2,11 @@
   <% @projects.order('priority desc').select { |x| x.category == 'Numérique' } .each do |project| %>
     <div class="d-flex">
       <% if project.photos.first.video? %>
-        <div class='index-project-card clickable' data-toggle="modal" data-target="#modal<%= project.id %>" data-aos="fade-up" >
+        <div class='index-project-card clickable' data-toggle="modal" data-target="#modal<%= project.id %>" >
           <%= cl_video_tag project.photos.first.key, height: 220, crop: :fill, gravity: :center, resource_type: :video, start_offset: '32', transformation: { overlay: 'play3', width: 350 }, quality: 'auto:eco', fetch_format: :auto %>
         <div class="index-project-card-white" style="background: linear-gradient(rgba(106,140,175,0.79), rgba(106,140,175,0.79))">
       <% else %>
-        <div class="index-project-card clickable" data-toggle="modal" data-target="#modal<%= project.id %>" data-aos="fade-up" style="background: url('<%= cl_image_path project.photos.first.key, height: 220, width: 300, crop: :fill, quality: 'auto:eco', fetch_format: :auto %>')">
+        <div class="index-project-card clickable" data-toggle="modal" data-target="#modal<%= project.id %>" style="background: url('<%= cl_image_path project.photos.first.key, height: 220, width: 300, crop: :fill, quality: 'auto:eco', fetch_format: :auto %>')">
           <div class="index-project-card-white" style="background: linear-gradient(rgba(106,140,175,0.79), rgba(106,140,175,0.79))">
       <% end %>
             <p class='index-project-card__client'><%= project.client %></p>
