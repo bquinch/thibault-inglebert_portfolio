@@ -8,13 +8,13 @@
           <%= cl_video_tag @project.photos.first.key, controls: true, q_auto: :eco, overlay: {font_family: "arial", font_size: 100, :text=>"Propriété de Thibault Inglebert" }, color: "#ffffff20" %>
         <% else %>
           <!-- <img class="d-block" src="<%#= cl_image_path @project.photos.first.key %>" alt="<%#= "#{@project.id}-0" %>"> -->
-          <%= cl_image_tag @project.photos.first.key, alt: "#{@project.id}-0", class: 'd-block', quality: :auto, fetch_format: :auto %>
+          <%= cl_image_tag @project.photos.first.key, alt: "#{@project.id}-0", class: 'd-block', quality: :auto %>
         <% end %>
       </div>
       <% @project.photos[1..-1].each_with_index do |photo, index| %>
         <div class="carousel-item">
           <!-- <img class="d-block" src="<%#= cl_image_path photo.key %>" alt="<%#= "#{@project.id}-#{index}" %>"> -->
-          <%= cl_image_tag photo.key, alt: "#{@project.id}-#{index}", class: 'd-block', quality: :auto, fetch_format: :auto %>
+          <%= cl_image_tag photo.key, alt: "#{@project.id}-#{index}", class: 'd-block', quality: :auto %>
         </div>
       <% end %>
     </div>
