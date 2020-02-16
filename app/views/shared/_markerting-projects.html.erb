@@ -1,5 +1,5 @@
 <div class="index-container">
-  <% @projects.order('priority desc').select { |x| x.category == 'Marketing' } .each do |project| %>
+  <% @projects.order('priority desc').select { |x| x.category == 'Événementiel' } .each do |project| %>
     <div class="d-flex">
       <% if project.photos.first.video? %>
         <div class='index-project-card clickable' data-toggle="modal" data-target="#modal<%= project.id %>" data-aos="fade-up" >
