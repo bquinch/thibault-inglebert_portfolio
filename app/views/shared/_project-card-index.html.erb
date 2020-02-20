@@ -1,7 +1,8 @@
 <div class="d-flex aos-init aos-animate" data-aos="fade-up">
   <% if @project.photos.first.video? %>
     <div class='index-project-card clickable <%= @project.category %>' data-toggle="modal" data-target="#modal<%= @project.id %>" >
-    <%= cl_video_tag @project.photos.first.key, height: 220, crop: :fill, gravity: :center, resource_type: :video, start_offset: '32', transformation: { overlay: 'play3', width: 350 }, quality: 'auto:eco', fetch_format: :auto %>
+    <%= cl_video_tag @project.photos.first.key, height: 220, crop: :fill, gravity: :center, resource_type: :video, start_offset: '32', quality: 'auto:eco', fetch_format: :auto %>
+    <i class="fas fa-play-circle d-flex align-items-center"></i>
     <div class="index-project-card-white" style="background: linear-gradient(rgba(106,140,175,0.79), rgba(106,140,175,0.79))">
   <% else %>
     <div class="index-project-card clickable <%= @project.category %>" data-toggle="modal" data-target="#modal<%= @project.id %>" style="background: url('<%= cl_image_path @project.photos.first.key, height: 220, width: 300, crop: :fill, quality: 'auto:eco', fetch_format: :auto %>')">
