@@ -26,9 +26,13 @@
   }
 }
 
-.nav-tabs-tibo {
+.nav-tabs-tibo,
+.bottom-nav-line {
   .seperator {
     color: $blue;
     font-weight: bold;
   }
+
+  max-width: 90vw;
+  margin: 0 auto;
 }
