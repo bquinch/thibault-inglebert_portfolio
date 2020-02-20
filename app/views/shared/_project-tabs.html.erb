@@ -1,64 +1,24 @@
 <div class="nav-tabs-tibo d-flex justify-content-center align-items-center nav pt-1" id="nav-tab" role="tablist">
   <div class='nav-line'></div>
-  <a class='nav-link nav-tabs-tibo__title active' id="all-tab" data-toggle="tab" href="#nav-all" role="tab" aria-controls="nav-all" aria-selected="true">TRAVAUX</a>
+  <div class='nav-link nav-tabs-tibo__title active' id="all-tab" data-filter='all'>TRAVAUX</div>
   <div class="seperator"><span>&#183;</span></div>
-  <a class='nav-link nav-tabs-tibo__title' id="marketing-tab" data-toggle="tab" href="#nav-marketing" role="tab" aria-controls="nav-marketing" aria-selected="false">ÉVÉNEMENTIEL</a>
+  <div class='nav-link nav-tabs-tibo__title' id="marketing-tab" data-filter='Événementiel'>ÉVÉNEMENTIEL</div>
   <div class="seperator"><span>&#183;</span></div>
-  <a class='nav-link nav-tabs-tibo__title' id="identity-tab" data-toggle="tab" href="#nav-identity" role="tab" aria-controls="nav-identity" aria-selected="false">UNIVERS GRAPHIQUE</a>
+  <div class='nav-link nav-tabs-tibo__title' id="identity-tab" data-filter='Univers graphique'>UNIVERS GRAPHIQUE</div>
   <div class="seperator"><span>&#183;</span></div>
-  <a class='nav-link nav-tabs-tibo__title' id="illustration-tab" data-toggle="tab" href="#nav-illustration" role="tab" aria-controls="nav-illustration" aria-selected="false">MOTION DESIGN</a>
+  <div class='nav-link nav-tabs-tibo__title' id="illustration-tab" data-filter='Motion Design'>MOTION DESIGN</div>
   <div class="seperator"><span>&#183;</span></div>
-  <a class='nav-link nav-tabs-tibo__title' id="edition-tab" data-toggle="tab" href="#nav-edition" role="tab" aria-controls="nav-edition" aria-selected="false">ÉDITION</a>
+  <div class='nav-link nav-tabs-tibo__title' id="edition-tab" data-filter='Édition'>ÉDITION</div>
   <div class="seperator"><span>&#183;</span></div>
-  <a class='nav-link nav-tabs-tibo__title' id="webdesign-tab" data-toggle="tab" href="#nav-webdesign" role="tab" aria-controls="nav-webdesign" aria-selected="false">NUMÉRIQUE</a>
+  <div class='nav-link nav-tabs-tibo__title' id="webdesign-tab" data-filter='Numérique'>NUMÉRIQUE</div>
   <div class='nav-line'></div>
 </div>
 
 <!-- PROJECTS-TABS -->
 <div class="tab-content" id="myTabContent">
-  <div class="tab-pane show active" id="nav-all" role="tabpanel" aria-labelledby="nav-all-tab">
-    <div class="index-container">
+  <div class="tab-pane show active">
+    <div class="index-container" id='projects'>
       <% @projects.each do |project| %>
-        <% @project = project %>
-        <%= render partial: 'shared/project-card-index', object: @project %>
-      <% end %>
-    </div>
-  </div>
-  <div class="tab-pane" id="nav-marketing" role="tabpanel" aria-labelledby="nav-marketing-tab">
-    <div class="index-container">
-      <% @projects.select { |x| x.category == 'Événementiel' } .each do |project| %>
-        <% @project = project %>
-        <%= render partial: 'shared/project-card-index', object: @project %>
-      <% end %>
-    </div>
-  </div>
-  <div class="tab-pane" id="nav-identity" role="tabpanel" aria-labelledby="nav-identity-tab">
-    <div class="index-container">
-      <% @projects.select { |x| x.category == 'Univers graphique' } .each do |project| %>
-        <% @project = project %>
-        <%= render partial: 'shared/project-card-index', object: @project %>
-      <% end %>
-    </div>
-  </div>
-  <div class="tab-pane" id="nav-illustration" role="tabpanel" aria-labelledby="nav-illustration-tab">
-    <div class="index-container">
-      <% @projects.select { |x| x.category == 'Motion Design' } .each do |project| %>
-        <% @project = project %>
-        <%= render partial: 'shared/project-card-index', object: @project %>
-      <% end %>
-    </div>
-  </div>
-  <div class="tab-pane" id="nav-edition" role="tabpanel" aria-labelledby="nav-edition-tab">
-    <div class="index-container">
-      <% @projects.select { |x| x.category == 'Édition' } .each do |project| %>
-        <% @project = project %>
-        <%= render partial: 'shared/project-card-index', object: @project %>
-      <% end %>
-    </div>
-  </div>
-  <div class="tab-pane" id="nav-webdesign" role="tabpanel" aria-labelledby="nav-webdesign-tab">
-    <div class="index-container">
-      <% @projects.select { |x| x.category == 'Numérique' } .each do |project| %>
         <% @project = project %>
         <%= render partial: 'shared/project-card-index', object: @project %>
       <% end %>
