@@ -1,11 +1,11 @@
 .nav-tabs-tibo__title {
   font-weight: bold;
   transition: all .3s;
+  color: $blue-opaque;
 
   &:hover,
   &.active {
-    background: $blue;
-    color: white;
+    color: $blue;
   }
 }
 
@@ -22,5 +22,13 @@
 
   &.message-line-left {
     margin: 0 1rem 0 0;
+  }
+}
+
+.nav-tabs-tibo {
+  .seperator {
+    color: $blue;
+    font-weight: bold;
+    font-size: 0.3rem;
   }
 }
