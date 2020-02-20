@@ -1,0 +1,17 @@
+.project-show-card__images {
+  flex-wrap: wrap;
+}
+
+.project-show-card__image {
+  position: relative;
+
+  img {
+    object-fit: cover;
+  }
+
+  a {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+  }
+}

@@ -5,4 +5,8 @@ class PagesController < ApplicationController
     @projects = Project.all
     @message = Message.new
   end
+
+  def components
+    @projects = Project.all
+  end
 end

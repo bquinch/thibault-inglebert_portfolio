@@ -1,16 +1,34 @@
-<div class="show-project-card">
-  <div class="carousel carousel-main">
-    <% @project.photos.each_with_index do |photo, index| %>
-    <div class="carousel-cell">
-      <%= cl_image_tag photo.key, alt: "#{@project.client}#{@project.category}#{index + 1}" %>
-    </div>
-    <% end %>
+<div class="container my-3">
+  <div class="project-managment-list__titre d-flex align-items-center justify-content-between">
+    <h1><strong><%= @project.client %> - <%= @project.category %></strong></h1>
+    <%= link_to "Revenir aux projets", projects_path %>
   </div>
-  <div class="carousel carousel-nav">
-    <% @project.photos.each_with_index do |photo, index| %>
-    <div class="carousel-cell">
-      <%= cl_image_tag photo.key, alt: "#{@project.client}#{@project.category}#{index + 1}" %>
+  <div class="project-show-card bg-white border p-3">
+    <div class="project-managment-card__text">
+      <p><strong>IMAGES</strong></p>
     </div>
-    <% end %>
+    <div class="d-flex project-show-card__images mb-3">
+      <% if @project.photos.first.video? %>
+        <%= cl_video_tag @project.photos.first.key, height: 150, width: 200, crop: :fill, gravity: :center, resource_type: :video, start_offset: '32', transformation: { overlay: 'play3', width: 350 }, quality: 'auto:eco', fetch_format: :auto %>
+      <% else %>
+        <% @project.photos.each do |photo, i| %>
+          <div class="project-show-card__image">
+            <%= cl_image_tag photo.key, height: 150, width: 200, crop: :fill, gravity: :center, quality: 'auto:eco', fetch_format: :auto %>
+            <%= link_to delete_photo_attachment_project_path(@project, photo),
+                                method: :delete,
+                                data: { confirm: 'Veux-tu vraiment supprimer la photo ?' } do %>
+              <p>❌</p>
+            <% end %>
+          </div>
+        <% end %>
+      <% end %>
+    </div>
+    <div class="project-managment-card__text">
+      <p><strong><%= @project.category %></strong></p>
+      <p><%= @project.client %></p>
+      <p><%= @project.description %></p>
+      <p><%= @project.date %></p>
+      <p>Priorité: <%= @project.priority %></p>
+    </div>
   </div>
 </div>
