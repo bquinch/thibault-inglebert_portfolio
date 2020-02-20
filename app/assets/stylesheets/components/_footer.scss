@@ -1,17 +1,12 @@
 .footer-tibo {
-  height: 30vh;
+  min-height: 25vh;
   background: $blue;
-  display: grid;
-  padding: 3rem;
-  grid-template-columns: repeat(3, 1fr);
-  overflow: hidden;
 }
 
 .footer-link {
   color: rgba(255,255,255,0.77);
   text-decoration: none;
   transition: .1s;
-  font-weight: bold;
 
   &:hover {
     text-decoration: none;
@@ -24,18 +19,8 @@
   margin-bottom: 2rem;
 }
 
-@media(max-width: 756px) {
-  .footer-tibo {
-    grid-template-columns: repeat(2, 1fr);
-    padding: 2rem;
-    height: fit-content;
-  }
-}
-
-@media(max-width: 456px) {
-  .footer-tibo {
-    grid-template-columns: repeat(1, 1fr);
-    padding: 1rem;
-    height: fit-content;
+@media(max-width: 540px) {
+  .container {
+    max-width: 90vw;
   }
 }
