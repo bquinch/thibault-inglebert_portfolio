@@ -6,6 +6,8 @@ const filterTabs = () => {
   links.forEach((link) => {
     link.addEventListener('click', (event) => {
       projectContainer.innerHTML = '';
+      document.querySelector('.nav-link.active').classList.toggle('active');
+      event.currentTarget.classList.toggle('active');
       const filter = link.dataset.filter;
       const projects = Array.prototype.slice.call(projectCards).filter(project => project.dataset.category === filter);
       if (filter === 'all') {
