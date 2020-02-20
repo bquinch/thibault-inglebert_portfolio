@@ -1,12 +1,12 @@
 class ProjectsController < ApplicationController
   skip_before_action :authenticate_user!, only: [:index, :show]
-  before_action :set_project, only: %i[show edit update destroy]
+  before_action :set_project, only: %i[show edit update destroy delete_photo_attachment]
 
   def index
-    @projects = Project.all
+    @projects = Project.all.order('priority desc')
   end
 
-  # def show; end
+  def show; end
 
   def new
     @project = Project.new
@@ -34,6 +34,12 @@ class ProjectsController < ApplicationController
   def destroy
     @project.destroy
     redirect_to projects_path, notice: "Le projet a été supprimé"
+  end
+
+  def delete_photo_attachment
+    @photo = @project.photos.find(params[:format])
+    @photo.purge
+    redirect_to project_path(@project), notice: 'Photo supprimée'
   end
 
   private
