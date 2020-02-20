@@ -1,13 +1,16 @@
-<!-- <div id="menu-toggle"><i class="fas fa-bars"></i></div> -->
 <%= render 'shared/navbar' %>
 <div class="banner-border">
-  <div class="banner-tibo" style="background: url(<%= image_path "bg_nice.jpg", alt: "alttext", width: 800; %>)">
-    <h1 class="banner-tibo__main-title rellax" data-rellax-speed="-4">THIBAULT <strong>INGLEBERT</strong></h1>
-    <p class="banner-tibo__subtitle rellax" data-rellax-speed="-4">GRAPHISTE</p>
-    <div class="banner-tibo__links d-flex justify-content-center rellax mt-5" data-rellax-speed="-4">
-      <a href='#presentation' class="banner-tibo__links__presentation m-2 animated fadeInLeft delay-1s">PRÉSENTATION</a>
-      <a href='#nav-tab' class="banner-tibo__links__projets m-2 animated fadeInLeft delay-1s">TRAVAUX</a>
-      <a href='#contact' class="banner-tibo__links__contact m-2 animated fadeInLeft delay-1s">ME CONTACTER</a>
+  <div class="banner-tibo" style="background: url(<%= image_path "bg_classe.jpg", alt: "alttext", width: 800; %>)">
+    <div class="banner-container d-flex justify-content-center align-items-center">
+      <div class="banner-tibo__title mr-5">
+        <h1 class="banner-tibo__main-title rellax" data-rellax-speed="-4">THIBAULT <strong>INGLEBERT</strong></h1>
+        <p class="banner-tibo__subtitle rellax" data-rellax-speed="-4">GRAPHISTE</p>
+      </div>
+      <div class="banner-tibo__links d-flex justify-content-center rellax" data-rellax-speed="-4">
+        <a href='#presentation' class="banner-tibo__links__presentation m-2 animated fadeInRight delay-1s">PRÉSENTATION</a>
+        <a href='#nav-tab' class="banner-tibo__links__projets m-2 animated fadeInRight delay-1s">TRAVAUX</a>
+        <a href='#contact' class="banner-tibo__links__contact m-2 animated fadeInRight delay-1s">ME CONTACTER</a>
+      </div>
     </div>
   </div>
 </div>

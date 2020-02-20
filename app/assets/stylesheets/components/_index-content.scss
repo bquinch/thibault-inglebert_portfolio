@@ -46,18 +46,15 @@
   opacity: 0;
   transition: all .4s;
 
-  .index-project-card__client {
-    color: rgba(255,255,255,0.96);
-    font-weight: bold;
+  .index-project-card__client,
+  .index-project-card__category {
+    color: $blue;
     margin-bottom: 0;
     font-size: 1.5rem;
   }
 
-  .index-project-card__category {
-    color: rgba(255,255,255,0.96);
-    margin-bottom: 0;
-    font-size: 1.5rem;
-
+  .index-project-card__client {
+    font-weight: bold;
   }
 
   &:hover {
@@ -101,7 +98,7 @@
 }
 
 .project-managment-card__text {
-  color: #33333380;
+  color: $gray;
 
   p {
     margin-bottom: 0px;
