@@ -1,61 +1,71 @@
 .banner-border {
   width: 100vw;
-  height: 115vh;
+  height: 114vh;
   background: $blue;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 80%);
 }
 
 .banner-tibo {
   width: 100vw;
   height: 113vh;
   background-size: cover !important;
-  background-position: center 0% !important;
+  background-position: center -140px !important;
+  background-repeat: no-repeat !important;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  clip-path: polygon(0 0, 100% 0, 100% 100%, 0 90%);
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 80%);
+
+  .banner-tibo__title {
+    text-align: end;
+  }
 
   .banner-tibo__main-title {
-    background: $blue;
-    padding: .5rem 1rem;
     font-size: 3rem;
-    box-shadow: 0px 4px 16px rgba(0,0,0,0.1);
-    text-align: center;
     width: fit-content;
   }
 
   .banner-tibo__main-title,
   .banner-tibo__subtitle {
-    color: rgba(255,255,255,0.96);
+    color: $blue;
+    text-shadow: 0px 4px 16px rgba(255,255,255,0.2);
+    margin-bottom: 0px;
   }
 
   .banner-tibo__subtitle {
-    background: $blue;
-    padding: .25rem .5rem;
-    font-size: 1.5rem;
-    box-shadow: 0px 4px 16px rgba(0,0,0,0.1);
+    font-size: 3rem;
   }
 
   .banner-tibo__links {
     flex-wrap: wrap;
+    flex-direction: column;
   }
 
   .banner-tibo__links__projets,
   .banner-tibo__links__presentation,
   .banner-tibo__links__contact {
-    color: $blue;
     font-weight: bold;
-    background: white;
-    padding: .25rem .5rem;
     font-size: 1.25rem;
-    box-shadow: 0px 4px 16px rgba(0,0,0,0.1);
     text-decoration: none;
-    transition: background .3s;
+    transition: box-shadow .3s;
+    color: $blue;
+    box-shadow: none;
 
     &:hover {
-      background: $blue;
-      color: white;
+      box-shadow: 0px 4px 0px $blue;
     }
+  }
+}
+
+@media(max-width: 500px) {
+  .banner-container {
+    flex-direction: column;
+  }
+
+  .banner-tibo__title,
+  .banner-tibo__links {
+    text-align: center !important;
+    margin-right: 0px !important;
   }
 }
