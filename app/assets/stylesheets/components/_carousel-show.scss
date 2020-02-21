@@ -18,12 +18,12 @@
   }
 }
 
-.fa-times-circle {
+.fa-times {
   position: absolute;
   top: 1rem;
   right: -3rem;
-  font-size: 2rem;
-  color: #fff;
+  font-size: 1.5rem;
+  color: rgba(255,255,255,0.76);
   pointer-events: none;
 }
 
@@ -63,11 +63,8 @@
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  padding: .7rem;
-  background-color: $blue;
-  border-radius: 50%;
-  color: #fff;
-  border: 10px solid $blue;
+  color: rgba(255,255,255,0.76);
+  filter: drop-shadow(0px 4px 6px rgba(0,0,0,0.7));
 }
 
 .carousel-control-prev-icon {
