@@ -3,10 +3,10 @@
     <div class='index-project-card clickable' data-toggle="modal" data-target="#modal<%= @project.id %>" >
     <%= cl_video_tag @project.photos.first.key, height: 200, crop: :fill, gravity: :center, resource_type: :video, start_offset: '32', quality: 'auto:eco', fetch_format: :auto %>
     <i class="fas fa-play-circle d-flex align-items-center"></i>
-    <div class="index-project-card-white" style="background: linear-gradient(rgba(241,241,241,0.88), rgba(241,241,241,0.88))">
+    <div class="index-project-card-white" style="background: linear-gradient(rgba(78,103,127,0.93), rgba(78,103,127,0.93))">
   <% else %>
     <div class="index-project-card clickable" data-toggle="modal" data-target="#modal<%= @project.id %>" style="background: url('<%= cl_image_path @project.photos.first.key, height: 200, crop: :fill, quality: 'auto:eco', fetch_format: :auto %>')">
-    <div class="index-project-card-white" style="background: linear-gradient(rgba(241,241,241,0.88), rgba(241,241,241,0.88))">
+    <div class="index-project-card-white" style="background: linear-gradient(rgba(78,103,127,0.93), rgba(78,103,127,0.93))">
   <% end %>
       <p class='index-project-card__client'><strong><%= @project.client.upcase %></strong></p>
       <p class='index-project-card__category'><%= @project.category %></p>
