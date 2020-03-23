@@ -8,7 +8,15 @@
       <%= link_to project_path(project), target: :blank do %>
         <div class="project-managment-card__left d-flex">
           <div class="project-managment-card__image pr-3">
-            <%= cl_image_tag project.photos.first.key, width: 150, crop: :fill %>
+            <% unless project.photos.empty? %>
+              <% if project.photos.first.video? %>
+                <%= cl_video_tag @project.photos.first.key, height: 150, width: 200, crop: :fill, gravity: :center, resource_type: :video, start_offset: '32', transformation: { overlay: 'play3', width: 350 }, quality: 'auto:eco', fetch_format: :auto %>
+              <% else %>
+                <%= cl_image_tag project.photos.first.key, width: 150, crop: :fill %>
+              <% end %>
+            <% else %>
+              <%= image_tag "no-image.png", alt: "no image", width: 150, crop: :fill %>
+            <% end %>
           </div>
           <div class="project-managment-card__text">
             <p><strong><%= project.category %></strong></p>
