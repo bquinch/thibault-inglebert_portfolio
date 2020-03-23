@@ -7,27 +7,32 @@
     <div class="project-managment-card__text">
       <p><strong>IMAGES</strong></p>
     </div>
-    <div class="d-flex project-show-card__images mb-3">
-      <div class="project-show-card__image">
+    <% if @project.photos.empty? %>
+      <p>No photos on this project</p>
+    <% else %>
+      <div class="d-flex project-show-card__images mb-3">
         <% if @project.photos.first.video? %>
-          <%= cl_video_tag @project.photos.first.key, height: 150, width: 200, crop: :fill, gravity: :center, resource_type: :video, start_offset: '32', transformation: { overlay: 'play3', width: 350 }, quality: 'auto:eco', fetch_format: :auto %>
-          <%= link_to delete_photo_attachment_project_path(@project, photo),
-                              method: :delete,
-                              data: { confirm: 'Veux-tu vraiment supprimer la photo ?' } do %>
-            <p>❌</p>
-          <% end %>
-        <% else %>
-          <% @project.photos.each do |photo, i| %>
-            <%= cl_image_tag photo.key, height: 150, width: 200, crop: :fill, gravity: :center, quality: 'auto:eco', fetch_format: :auto %>
+          <div class="project-show-card__image">
+            <%= cl_video_tag @project.photos.first.key, height: 150, width: 200, crop: :fill, gravity: :center, resource_type: :video, start_offset: '32', transformation: { overlay: 'play3', width: 350 }, quality: 'auto:eco', fetch_format: :auto %>
             <%= link_to delete_photo_attachment_project_path(@project, photo),
                                 method: :delete,
                                 data: { confirm: 'Veux-tu vraiment supprimer la photo ?' } do %>
               <p>❌</p>
             <% end %>
+          <% else %>
+            <% @project.photos.each do |photo, i| %>
+              <div class="project-show-card__image">
+                <%= cl_image_tag photo.key, height: 150, width: 200, crop: :fill, gravity: :center, quality: 'auto:eco', fetch_format: :auto %>
+                <%= link_to delete_photo_attachment_project_path(@project, photo),
+                                    method: :delete,
+                                    data: { confirm: 'Veux-tu vraiment supprimer la photo ?' } do %>
+                  <p>❌</p>
+                <% end %>
+              </div>
+            <% end %>
           <% end %>
-        <% end %>
       </div>
-    </div>
+    <% end %>
     <div class="project-managment-card__text">
       <p><strong><%= @project.category %></strong></p>
       <p><%= @project.client %></p>
