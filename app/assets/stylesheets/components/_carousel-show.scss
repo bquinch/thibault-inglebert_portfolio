@@ -28,13 +28,10 @@
 }
 
 .description {
-  position: absolute;
-  bottom: 0px;
-  left: 10%;
   z-index: 3000;
   font-weight: bold;
   font-size: .9rem;
-  align-items: center;
+  justify-content: center;
 }
 
 .description__project {
@@ -42,7 +39,6 @@
   background: $blue;
   padding: .25rem .5rem;
   box-shadow: 0px 4px 16px rgba(0,0,0,0.3);
-  width: fit-content;
 }
 
 .description__client {
@@ -50,7 +46,6 @@
   background: white;
   padding: .25rem .5rem;
   box-shadow: 0px 4px 16px rgba(0,0,0,0.3);
-  width: fit-content;
 }
 
 .carousel-item {
@@ -59,6 +54,17 @@
   video {
     width: 100%;
   }
+}
+
+.carousel-caption {
+  position: absolute;
+  right: 15%;
+  bottom: 0;
+  left: 15%;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 0;
+  text-align: center;
 }
 
 .carousel-control-prev-icon,
@@ -92,12 +98,6 @@ body.modal-open .all-content{
     filter: blur(5px);
 }
 
-@media(min-width: 477px) and (max-width: 756px) {
-  .description {
-    left: 5%;
-  }
-}
-
 @media(max-width: 476px) {
   .carousel-item img,
   .modal-dialog {
@@ -106,33 +106,8 @@ body.modal-open .all-content{
     margin: 25% auto;
   }
 
-  .carousel-control-next,
-  .carousel-control-prev {
-    top: auto;
-  }
-
-  .carousel-control-prev {
-    right: 50%;
-    left: auto;
-  }
-
-  .carousel-control-next {
-    left: 50%;
-    right: auto;
-  }
-
-  .carousel-control-prev-icon,
-  .carousel-control-next-icon {
-    bottom: 0;
-  }
-
-  .description {
-    left: 0px;
-    bottom: -45%;
-  }
-
-  .fa-times-circle {
-    right: -1.5rem;
+  .fa-times {
+    right: -1rem;
     top: -10%;
   }
 }
