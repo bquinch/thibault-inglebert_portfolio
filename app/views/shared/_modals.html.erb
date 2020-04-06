@@ -1,7 +1,7 @@
 <!-- MODALS -->
 <% if @projects %>
   <% @projects.each do |project| %>
-    <div class="modal fade bd-example-modal-lg" id='modal<%= project.id %>' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel">
+    <div class="modal fade bd-example-modal-lg" id='modal<%= project.id %>' tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
           <% @project = project %>
