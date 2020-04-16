@@ -1,4 +1,5 @@
-require("@rails/ujs").start()
+// require("@rails/ujs").start()
+require("turbolinks").start()
 require("@rails/activestorage").start()
 require("channels")
 
@@ -47,4 +48,5 @@ AOS.init();
 if (document.querySelector('.nav-link')) {
   filterTabs();
 }
+
 

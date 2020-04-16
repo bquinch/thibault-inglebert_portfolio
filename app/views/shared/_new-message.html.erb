@@ -4,7 +4,7 @@
       <h1 class="new-message-form-container__title"><strong>ME CONTACTER</strong></h1>
       <div class='nav-line message-line'></div>
     </div>
-    <%= simple_form_for @message, url: messages_path do |f| %>
+    <%= simple_form_for @message, url: messages_path, remote: true do |f| %>
       <div class="form-inputs">
         <div class="form-row">
           <div class="col-5">
