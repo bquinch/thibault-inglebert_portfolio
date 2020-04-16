@@ -9,4 +9,7 @@ class PagesController < ApplicationController
   def components
     @projects = Project.all.order('priority desc')
   end
+
+  def render_modal
+  end
 end

@@ -1,9 +1,14 @@
+require("@rails/ujs").start()
+require("@rails/activestorage").start()
+require("channels")
+
 import "bootstrap";
 import "flatpickr/dist/themes/airbnb.css";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import { initFlatPickr } from "plugins/flatpickr.js";
 import { loadingScreen } from "plugins/loading_screen.js";
+import { modalLoad } from "plugins/modal_load.js";
 import { initRellax } from "plugins/rellax.js";
 import { filterTabs } from "plugins/filter_tabs.js";
 import { initNavbar } from "plugins/init_navbar.js";
@@ -14,6 +19,8 @@ import { previewImageOnFileSelect } from "plugins/preview_image.js";
 initFlatPickr();
 
 loadingScreen();
+
+modalLoad();
 
 if (document.querySelector('.modal')) {
   pauseVideo();

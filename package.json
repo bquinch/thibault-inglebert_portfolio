@@ -2,12 +2,16 @@
   "name": "thibault-inglebert_portfolio",
   "private": true,
   "dependencies": {
+    "@rails/actioncable": "^6.0.2-2",
+    "@rails/activestorage": "^6.0.2-2",
+    "@rails/ujs": "^6.0.2-2",
     "@rails/webpacker": "4.2.2",
     "acorn": "^6.4.1",
     "animate.css": "^3.7.2",
     "aos": "^2.3.4",
     "bootstrap": "^4.4.1",
     "bootstrap.native": "^2.0.27",
+    "channels": "0.0.4",
     "flatpickr": "^4.6.3",
     "flickity": "^2.2.1",
     "flickity-as-nav-for": "^2.0.1",
@@ -16,7 +20,8 @@
     "hover.css": "^2.3.2",
     "jquery": "^3.4.1",
     "popper.js": "^1.16.1",
-    "rellax": "^1.12.0"
+    "rellax": "^1.12.0",
+    "turbolinks": "^5.2.0"
   },
   "devDependencies": {
     "webpack-dev-server": "^3.10.1"
