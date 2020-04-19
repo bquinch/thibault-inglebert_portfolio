@@ -1,0 +1,5 @@
+meta_product_name: "Thibault Inglebert"
+meta_title: "Thibault Inglebert"
+meta_description: "Thibault Inglebert, Graphiste"
+meta_image: "bg_classe.webp" # should exist in `app/assets/images/`
+twitter_account: "@product_twitter_account"   # required for Twitter Cards
