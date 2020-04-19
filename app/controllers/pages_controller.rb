@@ -11,5 +11,6 @@ class PagesController < ApplicationController
   end
 
   def render_modal
+    @project = Project.find(params[:format])
   end
 end

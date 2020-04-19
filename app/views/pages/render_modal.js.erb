@@ -1,0 +1,8 @@
+function renderModal(innerHTML) {
+  const modal = document.getElementById('modal');
+  modal.innerHTML = innerHTML;
+  $('#projectModal').modal('show');
+}
+
+
+renderModal('<%= j render "shared/empty_modal", project: @project %>');

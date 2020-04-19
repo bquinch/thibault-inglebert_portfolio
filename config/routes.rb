@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   devise_for :users
   root to: 'pages#home'
   get 'components', to: 'pages#components'
+  get 'render_modal', to: 'pages#render_modal', defaults: { format: :js }
 
   resources :projects do
     member do
