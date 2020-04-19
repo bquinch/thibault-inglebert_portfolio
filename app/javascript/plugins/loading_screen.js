@@ -14,5 +14,4 @@ const loadingScreen = () => {
   setTimeout(function(){ toggleModal() }, 6000);
 }
 
-
 export { loadingScreen }

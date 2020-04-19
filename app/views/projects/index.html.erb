@@ -1,7 +1,7 @@
 <div class="project-managment-list">
   <div class="project-managment-list__titre d-flex align-items-center justify-content-between">
     <h1><strong>LISTE DES PROJETS</strong></h1>
-    <%= link_to "Revenir à l'acceuil", root_url %>
+    <%= link_to "Revenir à l'accueil", root_url %>
   </div>
   <% @projects.order('priority desc').each do |project| %>
     <div class="project-managment-card d-flex align-items-center justify-content-between p-3 bg-white border-bottom">
