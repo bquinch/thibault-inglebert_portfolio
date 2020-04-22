@@ -8,3 +8,23 @@
     <a class='hvr-sweep-to-right' href="#contact"><p>CONTACT</p></a>
   </div>
 </div>
+
+<!-- VARIABLES -->
+<% first = ColorPalette.last.first_color %>
+<% sixth = ColorPalette.last.sixth_color %>
+<% fifth = ColorPalette.last.fifth_color %>
+
+<!-- STYLE -->
+<style>
+  .sidebar-tibo {
+    background: <%= sixth %>;
+  }
+
+  .hvr-sweep-to-right:before {
+    background: <%= first %> !important;
+  }
+
+  .sidebar-tibo a {
+    color: <%= fifth %>;
+  }
+</style>
