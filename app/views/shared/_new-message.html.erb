@@ -19,10 +19,42 @@
       </div>
       <div class="d-flex justify-content-center align-items-center">
         <div class='nav-line message-line-left'></div>
-        <%= f.submit 'Envoyer le message', class: 'btn-tibo-primary' %>
+        <%= f.submit 'Envoyer le message', class: 'btn btn-tibo-primary' %>
       </div>
     <% end %>
   </div>
   <div class='presentation-card__image ml-5'><%= image_tag "chat.svg", alt: "chat", width: 300 %></div>
 </div>
+
+<!-- STYLE -->
+<% first = ColorPalette.last.first_color %>
+<% second = ColorPalette.last.second_color %>
+<% fourth = ColorPalette.last.fourth_color %>
+<% fifth = ColorPalette.last.fifth_color %>
+
+<style>
+  .btn-tibo-primary {
+    color: <%= first %> !important;
+    background: <%= fifth %> !important;
+  }
+
+  .btn-tibo-primary:hover {
+    color: <%= fifth %> !important;
+    background: <%= first %> !important;
+  }
+
+  .new-project-container__title,
+  .log-in__title,
+  .new-message-form-container__title {
+    color: <%= first %> !important;
+  }
+
+  .new-project-form-container label {
+    color: <%= second %>;
+  }
+
+  .form-check-label {
+    color: <%= fourth %>;
+  }
+</style>
 

@@ -1,5 +1,5 @@
 <%= render 'shared/navbar' %>
-<div class="banner-border">
+<div class="banner-border" style="background: <%= ColorPalette.last.first_color %>">
   <div class="banner-tibo" style="background: url(<%= image_path "bg_classe.webp", alt: "banniere-thibault-inglebert", width: 800; %>)">
     <div class="banner-container d-flex justify-content-center align-items-center">
       <div class="banner-tibo__title mr-5">
@@ -20,3 +20,23 @@
 <%= render 'shared/new-message' %>
 <div class="mb-5"></div>
 <%= render 'shared/footer' %>
+
+<!-- VARIABLES -->
+<% first = ColorPalette.last.first_color %>
+
+<!-- STYLE -->
+<style>
+  .banner-tibo__links__presentation,
+  .banner-tibo__links__projets,
+  .banner-tibo__links__contact,
+  .banner-tibo__main-title,
+  .banner-tibo__subtitle {
+    color: <%= first %>;
+  }
+
+  .banner-tibo__links__presentation:hover,
+  .banner-tibo__links__projets:hover,
+  .banner-tibo__links__contact:hover {
+    box-shadow: 0px 4px 0px <%= first %>;
+  }
+</style>

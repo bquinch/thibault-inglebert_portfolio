@@ -1,6 +1,5 @@
 .footer-tibo {
   min-height: 25vh;
-  background: $blue;
 
   ul {
     list-style: none;
@@ -8,18 +7,15 @@
 }
 
 .footer-link {
-  color: rgba(255,255,255,0.77);
   text-decoration: underline;
   transition: .1s;
 
   &:hover {
     text-decoration: none;
-    color: rgba(255,255,255,0.97);
   }
 }
 
 .footer-text {
-  color: rgba(255,255,255,0.77);
   margin-bottom: 2rem;
 }
 

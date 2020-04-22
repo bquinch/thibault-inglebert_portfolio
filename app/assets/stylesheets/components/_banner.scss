@@ -1,7 +1,6 @@
 .banner-border {
   width: 100vw;
   height: 114vh;
-  background: $blue;
   clip-path: polygon(0 0, 100% 0, 100% 85%, 0 80%);
 }
 
@@ -28,7 +27,6 @@
 
   .banner-tibo__main-title,
   .banner-tibo__subtitle {
-    color: $blue;
     text-shadow: 0px 4px 16px rgba(255,255,255,0.2);
     margin-bottom: 0px;
   }
@@ -49,12 +47,7 @@
     font-size: 1rem;
     text-decoration: none;
     transition: box-shadow .3s;
-    color: $blue;
     box-shadow: none;
-
-    &:hover {
-      box-shadow: 0px 4px 0px $blue;
-    }
   }
 }
 

@@ -35,3 +35,23 @@ Aujourd’hui, après avoir acquis les compétences techniques, j'ai transformé
     </div>
   </div>
 </div>
+
+<!-- VARIABLES -->
+<% first = ColorPalette.last.first_color %>
+<% fourth = ColorPalette.last.fourth_color %>
+
+<!-- STYLE -->
+<style>
+  .presentation-card__text {
+    color: <%= fourth %>;
+  }
+
+  .presentation-card__text h1 {
+    color: <%= first %>;
+  }
+
+  .presentation-background-left,
+  .presentation-background-right {
+    background-color: <%= first %>;
+  }
+</style>

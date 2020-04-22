@@ -1,5 +1,8 @@
+<!-- VARIABLES -->
 <% photos = @project.photos %>
 <% first = photos.first %>
+<% first_to_rgb = ColorPalette.last.first_color.paint.opacity(0.93).to_rgb %>
+
 <% unless @project.photos.empty? %>
   <div class="index-project d-flex aos-init aos-animate animated fadeIn" data-aos="fade-up" data-category='<%= @project.category %>'>
     <%= link_to render_modal_path(@project), remote: true do %>
@@ -7,10 +10,10 @@
         <div class='index-project-card clickable'>
         <%= cl_video_tag first.key, height: 200, crop: :fill, gravity: :center, resource_type: :video, start_offset: '32', quality: 'auto:eco', fetch_format: :auto %>
         <i class="fas fa-play-circle d-flex align-items-center"></i>
-        <div class="index-project-card-white" style="background: linear-gradient(rgba(78,103,127,0.93), rgba(78,103,127,0.93))">
+        <div class="index-project-card-white" style="background: linear-gradient(<%= first_to_rgb %>, <%= first_to_rgb %>)">
       <% else %>
         <div class="index-project-card clickable" style="background: url('<%= cl_image_path first.key, height: 200, crop: :fill, quality: 'auto:eco', fetch_format: :auto %>')">
-        <div class="index-project-card-white" style="background: linear-gradient(rgba(78,103,127,0.93), rgba(78,103,127,0.93))">
+        <div class="index-project-card-white" style="background: linear-gradient(<%= first_to_rgb %>, <%= first_to_rgb %>)">
       <% end %>
           <p class='index-project-card__client'><strong><%= @project.client.upcase %></strong></p>
           <p class='index-project-card__category'><%= @project.category %></p>

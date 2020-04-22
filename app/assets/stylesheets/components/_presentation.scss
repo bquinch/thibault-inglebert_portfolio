@@ -7,7 +7,6 @@
 }
 
 .presentation-card__text {
-  color: $dark-gray;
   flex: 0 0 70%;
 
   &.mix_blend {
@@ -17,7 +16,6 @@
   h1 {
     font-size: 1rem;
     font-weight: bold;
-    color: $blue;
   }
 
   p {
@@ -39,7 +37,6 @@
   left: 0px;
   height: 60vh;
   width: 100vw;
-  background-color: $blue;
   z-index: -10;
 }
 

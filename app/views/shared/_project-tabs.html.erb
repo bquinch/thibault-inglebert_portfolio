@@ -28,3 +28,25 @@
 <div class="d-flex bottom-nav-line">
   <div class='nav-line'></div>
 </div>
+
+<!-- VARIABLES -->
+<% first = ColorPalette.last.first_color %>
+<% sixth = ColorPalette.last.sixth_color %>
+
+<!-- STYLE -->
+<style>
+  .nav-tabs-tibo__title {
+    color: <%= sixth %>;
+  }
+
+  .nav-tabs-tibo__title:hover,
+  .nav-tabs-tibo__title.active,
+  .nav-tabs-tibo .seperator,
+  .bottom-nav-line .seperator {
+    color: <%= first %>;
+  }
+
+  .nav-line {
+    background: <%= first %>;
+  }
+</style>

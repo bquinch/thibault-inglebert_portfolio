@@ -35,11 +35,37 @@
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload', defer: true %>
   </head>
   <body>
+
+    <!-- LOADING MODAL -->
     <%= render 'shared/loading' %>
     <div id="modal"></div>
+
     <div class="all-content">
       <%= render 'shared/flashes' %>
       <%= yield %>
     </div>
+
+    <!-- STYLE VARIABLES -->
+    <% first = ColorPalette.last.first_color %>
+    <% third = ColorPalette.last.third_color %>
+    <% fifth = ColorPalette.last.fifth_color %>
+
+    <!-- MAIN STYLE -->
+    <style>
+      .description__project {
+        color: <%= fifth %>;
+        background: <%= first %>;
+      }
+
+      .description__client {
+        color: <%= first %>;
+        background: <%= fifth %>;
+      }
+
+      body {
+        background: <%= third %>;
+      }
+    </style>
+
   </body>
 </html>

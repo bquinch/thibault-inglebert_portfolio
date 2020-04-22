@@ -1,6 +1,4 @@
 .btn-tibo-primary {
-  background: #fff;
-  color: $blue !important;
   padding: .5rem 1rem;
   font-weight: bold;
   border: none;
@@ -8,26 +6,4 @@
   transition: backgound .3s;
   box-shadow: 0px 4px 16px rgba(0,0,0,0.1);
   transition: background .3s;
-
-  &:hover {
-    background: $blue;
-    color: white !important;
-  }
-}
-
-.btn-tibo-secondary {
-  background: #fff;
-  color: $blue !important;
-  padding: .5rem 1rem;
-  font-weight: bold;
-  border: none;
-  transform: skew(-10deg);
-  transition: backgound .3s;
-  box-shadow: 0px 4px 16px rgba(0,0,0,0.1);
-  transition: background .3s;
-
-  &:hover {
-    background: $blue;
-    color: white !important;
-  }
 }
