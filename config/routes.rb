@@ -2,10 +2,9 @@ Rails.application.routes.draw do
   mount RailsAdmin::Engine => '/admin', as: 'rails_admin'
   devise_for :users
   root to: 'pages#home'
-  get 'components', to: 'pages#components'
   get 'render_modal', to: 'pages#render_modal', defaults: { format: :js }
 
-  resources :projects do
+  resources :projects, only: :show do
     member do
       delete :delete_photo_attachment
     end

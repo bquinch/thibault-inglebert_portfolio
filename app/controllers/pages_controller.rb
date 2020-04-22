@@ -6,10 +6,6 @@ class PagesController < ApplicationController
     @message = Message.new
   end
 
-  def components
-    @projects = Project.all.order('priority desc')
-  end
-
   def render_modal
     @project = Project.find(params[:format])
   end
