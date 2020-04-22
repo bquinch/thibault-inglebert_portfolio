@@ -18,15 +18,16 @@ RailsAdmin.config do |config|
   config.included_models = [ "Project", "User", "ColorPalette" ]
 
   config.model 'Project' do
-    list do
-      field :description
-      field :category
-      field :client
-      field :date
-      field :priority
-      field :photos, :multiple_active_storage do
-        delete_method :remove_photos
+    field :description
+    field :category, :enum do
+      enum do
+        ["Événementiel", "Univers graphique", "Motion Design", "Édition", "Numérique"]
       end
+    end
+    field :client
+    field :priority
+    field :photos, :multiple_active_storage do
+      delete_method :remove_photos
     end
   end
 
